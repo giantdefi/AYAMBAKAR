@@ -70,7 +70,7 @@ return (
 
     <div>
 
-      <section className="relative min-h-screen bg-gray-200 dark:bg-gray-700 animated fadeIn">
+      <section className="relative min-h-screen pt-10 bg-gray-200 dark:bg-gray-700 animated fadeIn">
 
   
         <div className="_gradient_purple/90 w-full h-[600px] bg-cover bg-fixedAA  "
@@ -78,15 +78,15 @@ return (
         >
        
 
-       <section className="bg-cover bg-center text-white py-4 pt-[100px] bg-[url('/assets/img/bg/burner.webp')]" >
+       {/* <section className="bg-cover bg-center text-white py-4 pt-[100px] bg-[url('/assets/img/bg/burner.webp')]" >
         <div className="container mx-auto text-center h-[400px]">
             <h1 className="text-2xl md:text-5xl font-bold font-rocksalt">SATE & AYAM BAKAR </h1>
             <h1 className="text-6xl md:text-7xl font-bold mt-4 font-DayOne">PATRIOT</h1>
             <h1 className="text-xl md:text-7xl font-bold mt-4 ">Stadion Patriot Bekasi Selatan</h1>
             <p className="mt-4 text-xl md:text-2xl ">Sate Ayam, Sate Kambing, Ayam Bakar, Ayam Goreng, pecel Lele.</p>
-           {/*  <a href="#start" className="mt-8 inline-block bg-yellow-500 text-white py-3 px-8 rounded-full text-lg font-semibold ">Start Join Now</a> */}
+           <a href="#start" className="mt-8 inline-block bg-yellow-500 text-white py-3 px-8 rounded-full text-lg font-semibold ">Start Join Now</a>
         </div>
-    </section>
+    </section> */}
 
 
 
@@ -98,14 +98,17 @@ return (
 
       
     
-      <p className="mt-6 text-lg leading-6 text-gray-600">Mohon izinkan aplikasi mengakses Lokasi anda.</p>
+     
     
-    {!totalDistance &&
+    {!totalDistance && <>
+     <p className="mt-6 text-lg leading-6 text-gray-600">Mohon izinkan aplikasi mengakses Lokasi anda.</p>
       <button onClick={handleShowPopup} className="w-full my-2 text-white bg-blue-700 hover:bg-blue-800 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
-  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  <i className="icofont-arrow-right animate-ping  mr-2"></i> Izinkan Lokasi Saya</button>}
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  <i className="icofont-arrow-right animate-ping  mr-2"></i> Izinkan Lokasi Saya</button>
+  </>
+  }
 
-<img src="/assets/img/delivery-order.webp" className="w-[200px] mx-auto" alt="delivery-order" /> 
+<img src="/assets/img/delivery-order.webp" className="w-[200px] mx-auto mt-4" alt="delivery-order" /> 
       <p className="mt-6 text-lg leading-6 text-gray-600">Jarak ke Lokasi anda : 
       {spinner ? 
       <svg style={{ maxWidth: 40 }} role="status" className="mx-4 inline w-4 h-4 text-gray-200 dark:text-gray-300 animate-spin  fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
