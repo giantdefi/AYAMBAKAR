@@ -7,7 +7,7 @@ const initialState = {
     totalDistance : false,
     duration : false,
     showGooglePopup : false,
-    anjing : false
+  
 
 }
 
