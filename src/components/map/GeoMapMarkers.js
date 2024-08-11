@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, LoadScript, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
-import { setShowMap,setUserCoords, setTotalDistance, setDuration } from 'redux/reducers/MapReducer'
+import { setShowMap,setUserCoords, setTotalDistance, setDuration, setShowGooglePopup } from 'redux/reducers/MapReducer'
 import { useSelector, useDispatch } from 'react-redux'
 //=========================================================
 const MapComponent = () => {
@@ -15,9 +15,9 @@ const MapComponent = () => {
   const [zomm, setZoom] = useState(16);
   const [activeMarker, setActiveMarker] = useState(null);
   //const [showMap, setShowMap] = useState(false);
-  const { showMap, userCoords } = useSelector((state) => state.MapReducer)
+  const { showMap, userCoords, showGooglePopup } = useSelector((state) => state.MapReducer)
 
-  console.log(userCoords)
+  console.log(showGooglePopup)
 
   const mapStyles = {
     height: "100vh",
@@ -25,12 +25,13 @@ const MapComponent = () => {
   };
 
   useEffect(() => { // referal sponsor from URL if any
-    if(!userCoords){
-       handleLocation()
+    if(showGooglePopup){
+      handleLocation()
+       dispatch(setShowGooglePopup(false))
     }
    
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userCoords])
+  }, [showGooglePopup])
 
   const handleLocation = () => {
     if (navigator.geolocation) {
