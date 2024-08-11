@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Link from 'next/link'
 import Router, { useRouter } from "next/router"
 import axios from 'axios'
-
+import TopMenu from "layout/TopMenu"
 import RightSidebar from "layout/RightSidebar"
 import ReferralLink from "components/reflink/ReferralLink"
 //import BtnDemoUser from "redux/actions/BtnDemoUser"
@@ -87,56 +87,7 @@ export default function MainHeader() {
                     </div>
 
                     <div className="flex w-full pt-2 content-center justify-between lg:w-1/2 md:justify-end">
-                        <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
-
-                        <li className="mr-3 uppercase font-semibold">
-                                <Link href="/"><a className="inline-block py-2 px-4 text-white no-underline"
-                                 
-                                >Home</a></Link>
-                            </li>
-
-                            <li className="mr-3 uppercase font-semibold">
-                                <button onClick={()=>router.push('/gold-chart')}><p className="inline-block py-2 px-4 text-white no-underline"
-                                    // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-                                >PRODUCTS</p></button>
-                            </li>
-
-                            <li className="mr-3 uppercase font-semibold">
-                                <button onClick={()=>router.push('/about-us')}><p className="inline-block py-2 px-4 text-white no-underline"
-                                    // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-                                >ABOUT</p></button>
-                            </li>
-
-                            <li className="mr-3 uppercase font-semibold">
-                                <button onClick={()=>router.push('/contact')}><p className="inline-block py-2 px-4 text-white no-underline"
-                                    // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-                                >CONTACT</p></button>
-                            </li>
-
-
-                            <li className="mr-3 flex centered">
-                             {!isLogin? 
-                                <button onClick={handleToggle}
-                                    className="flex justify-center  text-sm text-white  rounded-full   
-                  hover:bg-blue-500 transition ease-in-out duration-300 py-1 border-4 border-gray-400 text-xl px-4">
-                                  {showLogin ? 'LOGIN' : 'REGISTER'}  
-                                    </button>
-                                   
-                                    
-                                :
-                               <>
-                                                                               
-                                <button onClick={()=>router.push('/users')}
-                                className="flex justify-center  text-sm text-white hidden lg:block rounded-full  bg-blue-700 
-                                hover:bg-blue-500 transition ease-in-out duration-300 py-1 border-4 border-gray-200 text-xl px-4">
-                                                DASHBOARD</button>
-                               </>
-                              
-                                
-                                }
-
-                            </li>
-                        </ul>
+                      <TopMenu/>
                     </div>
 
 

@@ -29,7 +29,7 @@ import PersistReducer from 'redux/reducers/PersistReducer'
 import SoundReducer from 'redux/reducers/SoundReducer'
 
 import UsersReducer from 'redux/reducers/UsersReducer'
-
+import MapReducer from 'redux/reducers/MapReducer'
 const rootReducer = combineReducers({
 
   AuthReducer,
@@ -39,6 +39,7 @@ const rootReducer = combineReducers({
   LoaderReducer,
   MainmenuReducer,
   ModalReducer,
+  MapReducer,
   PersistReducer,
   ReferralReducer,
   SoundReducer,

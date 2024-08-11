@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 const moment = require('moment')
-
+import TopMenu from "layout/TopMenu"
 import dynamic from 'next/dynamic'
 import LEftSidebar from "layout/LEftSidebar"
 import RightSidebar from "layout/RightSidebar"
@@ -134,34 +134,7 @@ export default function TopNavigation() {
 </div>
 </div>
 
-<ul className="list-reset flex justify-between flex-1 md:flex-none items-center bg-gray-800">
-
-<li className="mr-3 uppercase md:font-semibold">
-        <Link href="/"><a className="inline-block py-2 px-4 text-white no-underline"
-         
-        >Home</a></Link>
-    </li>
-
-    <li className="mr-3 uppercase md:font-semibold">
-        <button onClick={()=>router.push('/gold-chart')}><p className="inline-block py-2 px-4 text-white no-underline"
-            // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-        >Products</p></button>
-    </li>
-
-    <li className="mr-3 uppercase md:font-semibold">
-        <button onClick={()=>router.push('/about-us')}><p className="inline-block py-2 px-4 text-white no-underline"
-            // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-        >About</p></button>
-    </li>
-
-    <li className="mr-3 uppercase font-semibold">
-        <button onClick={()=>router.push('/contact')}><p className="inline-block py-2 px-4 text-white no-underline"
-            // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-        >Contact</p></button>
-    </li>
-
-
-</ul>
+<TopMenu/>
         </>
     )
 }

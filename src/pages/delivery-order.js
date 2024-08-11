@@ -38,8 +38,8 @@ export default function Home() {
   const [toggle, setToggle] = useState(false)
   const { domain, title, desc } = useSelector((state) => state.GeneralReducer)
   const { isLogin, phone, email, toggleLogin } = useSelector((state) => state.AuthReducer)
-  const { rightSidebar } = useSelector((state) => state.MainmenuReducer)
-
+  const { rightSidebar } = useSelector((state) => state.MainmenuReducer) 
+  const { totalDistance, duration } = useSelector((state) => state.MapReducer) 
 
   useEffect(() => {
   
@@ -86,8 +86,14 @@ return (
 <div className="bg-white py-4 sm:py-12">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="mx-auto max-w-2xl sm:text-center">
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
-      <p className="mt-6 text-lg leading-8 text-gray-600">Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
+      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Menghitung Biaya Pengiriman</h2>
+
+      
+      <img src="/assets/img/delivery-order.webp" className="w-[200px] mx-auto" alt="delivery-order" />
+      <p className="mt-6 text-lg leading-4 text-gray-600">Mohon izinkan aplikasi mengakses Lokasi anda.</p>
+      <p className="mt-6 text-lg leading-4 text-gray-600">Jarak ke Lokasi anda : {totalDistance} Km</p>
+      <p className="mt-6 text-lg leading-4 text-gray-600">Biaya Pengiriman ke Lokasi anda : Rp. {5000 + (totalDistance * 2500)}</p>
+      <p className="mt-6 text-lg leading-4 text-gray-600">Waktu pengiriman jika tanpa hambatan minimum : {duration}</p>
     </div>
 
     {/* <RealestateSlider /> */}
@@ -95,9 +101,10 @@ return (
     <ProductSlider/>
 
   
+
 <ProductPricing/>
 
-{/* <GeoMapMarkers/>  */}
+<GeoMapMarkers/> 
   </div>
 </div>
        

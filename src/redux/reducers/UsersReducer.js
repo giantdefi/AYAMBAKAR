@@ -34,7 +34,8 @@ const initialState = {
      allowReloadClonUser: false,
      cloneLoginUsername: false,
      allowReloadPage: false,
-     warningCreateClone : false
+     warningCreateClone : false,
+     userCoords : false,
 
 }
 
@@ -121,13 +122,16 @@ export const UsersSlice = createSlice({
         setWarningCreateClone: (state, action) => {
             state.warningCreateClone = action.payload
         },
+        setUserCoords: (state, action) => {
+            state.userCoords = action.payload
+        },
 
         resetUsers: () => initialState
     }
 
 })
 
-export const { resetUsers, setNameFull, setHandphone, setEmail, setAddress,setCity,
+export const { resetUsers, setNameFull, setHandphone, setEmail, setAddress,setCity,setUserCoords,
     setProvince, setCountry, setPostcode, setAvatar, setGeoLocation, setIsGetGeocodeOK, setIsVerified,
     setCurrentPassword, setNewPassword, setConfirmPassword, setServerTime, setAllowReloadData, setAllowReloadUsers,setWarningCreateClone,
 
