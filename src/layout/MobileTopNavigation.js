@@ -99,7 +99,7 @@ export default function TopNavigation() {
     </a>
 
     <a onClick={()=>router.push('/')} className="cursor-pointer  flex centered  w-[250px] mt-2  mr-6">
-    <img src="/assets/logo-header.webp" className=" animated fadeInDown w-3/2" alt="logo" /> 
+    <img src="/assets/img/logo.png" className=" animated fadeInDown w-3/2" alt="logo" /> 
     </a>
 
     <div className="rounded-full w-[60px] h-[60px]  flex flex-col centered items-center ">

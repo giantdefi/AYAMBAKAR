@@ -74,7 +74,7 @@ export default function MainHeader() {
                      
                         <a onClick={() => onMenuClick('/')} className="flex cursor-pointer w-full">
                        
-                            <img src="/assets/img/logo.webp" className="ml-4 h-10 mt-2 animated fadeInDown" alt="logo" />
+                            <img src="/assets/img/logo.png" className="ml-4 h-10 mt-2 animated fadeInDown" alt="logo" />
                         
                         </a>
 
