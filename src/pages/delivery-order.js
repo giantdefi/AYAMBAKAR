@@ -141,14 +141,15 @@ return (
 
     {/* <RealestateSlider /> */}
 
-    {/* <ProductSlider/> */}
+    {/* <ProductSlider/>
 
   
-{/* 
+
 <ProductPricing/> */}
 <div className="mt-10">
    <GeoMapMarkers/>  
 </div>
+
 
   </div>
 </div>
