@@ -39,7 +39,7 @@ const MapComponent = () => {
         const { latitude, longitude, accuracy } = position.coords;
        // setUserCoords({ lat: latitude, lng: longitude });
      //  dispatch(setUserCoords({ lat: -6.2428683, lng: 107.0096988 })) // bekasi mede
-       dispatch(setUserCoords({ lat: -6.232182, lng: 106.9676264 })) 
+       dispatch(setUserCoords({ lat: latitude, lng: longitude })) 
        setDistance(accuracy);
        dispatch(setShowMap(true)) 
        // setShowMap(true)
