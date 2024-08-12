@@ -11,9 +11,9 @@ const RealestateSlider = dynamic(() => import("components/slider/RealestateSlide
 const ProductSlider = dynamic(() => import("components/slider/ProductSlider"), {
   ssr: false,
 })
-const GeoMapMarkers = dynamic(() => import("components/map/GeoMapMarkers"), {
-  ssr: false,
-})
+// const GeoMapMarkers = dynamic(() => import("components/map/GeoMapMarkers"), {
+//   ssr: false,
+// })
 //---- REDUX STORE ---------------------
 import { useSelector, useDispatch } from 'react-redux'
 import { setMainMenuItem } from 'redux/reducers/MainmenuReducer'
@@ -141,7 +141,7 @@ return (
 
       </div>
 
-   <GeoMapMarkers/> 
+
 
     </section>
 

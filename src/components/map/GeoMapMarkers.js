@@ -38,7 +38,8 @@ const MapComponent = () => {
       navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude, accuracy } = position.coords;
        // setUserCoords({ lat: latitude, lng: longitude });
-       dispatch(setUserCoords({ lat: latitude, lng: longitude })) 
+     //  dispatch(setUserCoords({ lat: -6.2428683, lng: 107.0096988 })) // bekasi mede
+       dispatch(setUserCoords({ lat: -6.232182, lng: 106.9676264 })) 
        setDistance(accuracy);
        dispatch(setShowMap(true)) 
        // setShowMap(true)
@@ -66,7 +67,7 @@ const MapComponent = () => {
         {
           origin,
           destination,
-          travelMode: window.google.maps.TravelMode.DRIVING,
+          travelMode: window.google.maps.TravelMode.TWO_WHEELER,
         },
         (result, status) => {
           console.log(result)
