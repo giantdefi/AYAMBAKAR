@@ -101,7 +101,7 @@ export default function HeaderBoard() {
 
               {ProductJSON.map((item, index) => {
                 return (
-                    <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700 p-1">
+                    <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700 p-1"  key={index}>
                     <img src={item.img} alt="Chicken Satay" className="w-full h-48 object-cover"/>
                     <div className="p-4">
                         <h3 className="text-[15px] bold leading-4 mb-2">{item.title}</h3>
