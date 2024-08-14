@@ -31,6 +31,29 @@ export const CartSlice = createSlice({
          state.shoppingCart = newshoppingCart
 
         },
+        decreaseQuantity(state, action) {
+            const itemIndex = state.shoppingCart.findIndex((item) => item.pid === action.payload.pid)
+
+            if(state.shoppingCart[itemIndex].quantity >= 1 ){
+                state.shoppingCart[itemIndex].quantity -= 1
+               }else if(state.shoppingCart[itemIndex].quantity === 0){                const newshoppingCart = state.shoppingCart.filter(
+                    (elm) => elm.pid !== action.payload.pid
+                 )
+                 state.shoppingCart = newshoppingCart
+               }
+
+        },
+        increaseQuantity(state, action) {
+            const itemIndex = state.shoppingCart.findIndex((item) => item.pid === action.payload.pid)
+           
+            if(itemIndex >= 0 ){
+             state.shoppingCart[itemIndex].quantity += 1
+            }else{
+             const temPCart = {...action.payload, quantity : 1}
+             state.shoppingCart.push(temPCart)
+            }
+
+        },
         setTotlaPrice: (state, action) => {
             state.totlaPrice = action.payload
         },
@@ -47,7 +70,7 @@ export const CartSlice = createSlice({
 
 export const { 
 
-    resetCart, addToCart, setTotlaPrice, deliveryCost, removeCartItem
+    resetCart, addToCart, setTotlaPrice, deliveryCost, removeCartItem, decreaseQuantity, increaseQuantity
 
 } = CartSlice.actions
 

@@ -95,7 +95,7 @@ return (
     <ProductSlider/>
 
   
-<ProductPricing/>
+{/* <ProductPricing/> */}
 
 {/* <GeoMapMarkers/>  */}
   </div>

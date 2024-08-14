@@ -55,7 +55,7 @@ const JoinButton = (props) => {
         <ul className="flex w-full flex-wrap items-center h-10 ">
 
           {!isLogin ?
-            <li className="border rounded-xl px-2 py-1 hover:bg-blue-900" onClick={handleLogin}>
+            <li className="border rounded-xl px-2 py-1 hover:bg-blue-900 text-white" onClick={handleLogin}>
               <div className="flex items-center w-full cursor-pointer font-semi-bold"  >
                 <svg className="mr-2" width={19} height={20} viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.9892 10.1871C18.9892 9.36767 18.9246 8.76973 18.7847 8.14966H9.68848V11.848H15.0277C14.9201 12.767 14.3388 14.1512 13.047 15.0812L13.0289 15.205L15.905 17.4969L16.1042 17.5173C17.9342 15.7789 18.9892 13.221 18.9892 10.1871Z" fill="#4285F4" />
@@ -63,7 +63,7 @@ const JoinButton = (props) => {
                   <path d="M4.17667 11.9366C3.97215 11.3165 3.85378 10.6521 3.85378 9.96562C3.85378 9.27905 3.97215 8.6147 4.16591 7.99463L4.1605 7.86257L1.13246 5.44363L1.03339 5.49211C0.37677 6.84302 0 8.36005 0 9.96562C0 11.5712 0.37677 13.0881 1.03339 14.4391L4.17667 11.9366Z" fill="#FBBC05" />
                   <path d="M9.68807 3.85336C11.5073 3.85336 12.7344 4.66168 13.4342 5.33718L16.1684 2.59107C14.4892 0.985496 12.3039 0 9.68807 0C5.89885 0 2.62637 2.23672 1.0332 5.49214L4.16573 7.99466C4.95162 5.59183 7.12608 3.85336 9.68807 3.85336Z" fill="#EB4335" />
                 </svg>
-                LOGIN WITH GOOGLE</div>
+                LOGIN GOOGLE</div>
             </li>
             :<></>
             // <li className="border-2 rounded-xl px-2 py-1 hover:bg-blue-900" onClick={handleLogout}>

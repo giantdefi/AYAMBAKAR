@@ -5,9 +5,19 @@ const initialState = {
     showMap : false,
     userCoords : false,
     totalDistance : false,
+    deliveryCost : false,
+
     duration : false,
-    showGooglePopup : false,
+
+    // constant 
+    basicCost : 5000,
+    costperKM : 2500,
+
+    userLocation : false,
+
   
+
+   showGooglePopup : false,
 
 }
 
@@ -25,11 +35,17 @@ export const UsersSlice = createSlice({
         setTotalDistance: (state, action) => {
             state.totalDistance = action.payload
         },
+        setDeliveryCost: (state, action) => {
+            state.deliveryCost = action.payload
+        },
         setDuration: (state, action) => {
             state.duration = action.payload
         },
         setShowGooglePopup: (state, action) => {
             state.showGooglePopup = action.payload
+        },
+        setUserLocation: (state, action) => {
+            state.userLocation = action.payload
         },
 
         resetMap: () => initialState
@@ -37,7 +53,7 @@ export const UsersSlice = createSlice({
 
 })
 
-export const { resetMap, setShowMap, setUserCoords,setTotalDistance, setDuration, setShowGooglePopup
+export const { resetMap, setShowMap, setUserCoords,setTotalDistance, setDuration, setShowGooglePopup, setDeliveryCost, setUserLocation
  
 
 } = UsersSlice.actions

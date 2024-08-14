@@ -38,9 +38,9 @@ export default function Home() {
 useEffect(() => {
 
   if(CartSidebar){
-     document.body.classList.add('overflow-hidden')
+   //  document.body.classList.add('overflow-hidden')
   }else{
-    document.body.classList.remove('overflow-hidden')
+   // document.body.classList.remove('overflow-hidden')
   }
  
 
@@ -49,7 +49,7 @@ useEffect(() => {
 
 
 const handleClose = () => { 
-  document.body.classList.remove('overflow-hidden')
+ // document.body.classList.remove('overflow-hidden')
     dispatch(setCartSidebar(false))
 }
 
@@ -64,12 +64,21 @@ const handleRemoveItem = (item) =>{
   dispatch(removeCartItem(item))
 
 }
+
+const handleCheckOut = ()=>{
+  dispatch(setCartSidebar(false))
+  router.push('/check-out')
+}
+
+
+
+
 return (
   <>
 
 
   
-    <div  className={`min-h-screen border-red-800 shadow-xl overflow-auto mt-24 md:mt-16 fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform  bg-white w-96 
+    <div  className={`min-h-screen border-red-800 shadow-xl overflow-auto mt-42 md:mt-16 fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform  bg-white w-96 
     dark:bg-gray-800 ${!CartSidebar && "translate-x-full"}`}
     >
       <div className="flex items-start justify-between mb-10">
@@ -144,7 +153,7 @@ return (
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  uppercase"><i class="icofont-trash"></i>  Bersihkan Keranjang</button>   
              </div> 
              <div className="flex centered">
-    <button  className="w-full my-2 text-white bg-green-900 hover:bg-green-800 w-[80%] 
+    <button onClick={handleCheckOut}  className="w-full my-2 text-white bg-green-900 hover:bg-green-800 w-[80%] 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  uppercase">  Check Out</button>   
              </div> 
