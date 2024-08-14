@@ -13,21 +13,92 @@ import { getAuth } from "firebase/auth";
 // 	measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 // };
 
+// const firebaseConfig = {
+
+// 	apiKey: "AIzaSyCnYx9H1yBdnl1_yHDVeH3NWEEzRhZonVY",
+  
+// 	authDomain: "sate-patriot.firebaseapp.com",
+  
+// 	projectId: "sate-patriot",
+  
+// 	storageBucket: "sate-patriot.appspot.com",
+  
+// 	messagingSenderId: "485248563641",
+  
+// 	appId: "1:485248563641:web:62b7418cd111c3895ede68"
+  
+//   };
+
+
+
+// const firebaseConfig = {
+
+// 	apiKey: "AIzaSyBLLVVNmlLK46naxl_iseyb0vg6kwmPlvQ",
+  
+// 	authDomain: "my-project-a2813.firebaseapp.com",
+  
+// 	projectId: "my-project-a2813",
+  
+// 	storageBucket: "my-project-a2813.appspot.com",
+  
+// 	messagingSenderId: "865489891577",
+  
+// 	appId: "1:865489891577:web:2345d786f39b737e717228",
+  
+// 	measurementId: "G-FXBSP0KFDL"
+  
+//   };
+
+  
+// const firebaseConfig = {
+
+// 	apiKey: "AIzaSyA28nkM7rQkK43RqGyq5fkhlAgaiBHwals",
+  
+// 	authDomain: "patriot-234b6.firebaseapp.com",
+  
+// 	projectId: "patriot-234b6",
+  
+// 	storageBucket: "patriot-234b6.appspot.com",
+  
+// 	messagingSenderId: "363032461235",
+  
+// 	appId: "1:363032461235:web:3e33dd01594081f56255c6"
+  
+//   };
+
+// const firebaseConfig = {
+
+// 	apiKey: "AIzaSyA28nkM7rQkK43RqGyq5fkhlAgaiBHwals",
+  
+// 	authDomain: "patriot-234b6.firebaseapp.com",
+  
+// 	projectId: "patriot-234b6",
+  
+// 	storageBucket: "patriot-234b6.appspot.com",
+  
+// 	messagingSenderId: "363032461235",
+  
+// 	appId: "1:363032461235:web:32b87f4ba6756d266255c6"
+  
+//   };
+
 const firebaseConfig = {
 
-	apiKey: "AIzaSyCnYx9H1yBdnl1_yHDVeH3NWEEzRhZonVY",
+	apiKey: "AIzaSyAhULBwh7GkUPfnh2JWXv98RtPDpASXXQw",
   
-	authDomain: "sate-patriot.firebaseapp.com",
+	authDomain: "ayam-bakar-patriot-6c6a1.firebaseapp.com",
   
-	projectId: "sate-patriot",
+	projectId: "ayam-bakar-patriot-6c6a1",
   
-	storageBucket: "sate-patriot.appspot.com",
+	storageBucket: "ayam-bakar-patriot-6c6a1.appspot.com",
   
-	messagingSenderId: "485248563641",
+	messagingSenderId: "24946305029",
   
-	appId: "1:485248563641:web:62b7418cd111c3895ede68"
+	appId: "1:24946305029:web:b0282bc78a35a14183946c"
   
   };
+  
+  
   
   
 

@@ -1,6 +1,6 @@
 import React, { } from "react";
 //import Link from 'next/link'
-
+// const firebase = require('firebase/app').default
 //----------- Firebase Login and Logout -----------------
 import { auth } from "./firebaseConfig";
 import {
