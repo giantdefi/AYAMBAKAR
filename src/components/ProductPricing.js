@@ -36,7 +36,7 @@ export default function HeaderBoard() {
 <section className="py-20 bg-white px-2">
         <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center text-red-700">Belanja Sekarang</h2>
-            <div className="mt-8 grid lg:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
+            <div className="mt-8 grid lg:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0 md:gap-6 lg:gap-12">
 
               {ProductJSON.map((item, index) => {
                 return (

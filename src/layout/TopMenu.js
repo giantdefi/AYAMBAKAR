@@ -48,9 +48,9 @@ export default function Mainmenu() {
     return (
         <>
 
-<ul className="list-reset flex w-full justify-between flex-1 md:flex-none items-center _gradient_slate fixed top-20 z-10">
+<ul className="list-reset flex w-full justify-between flex-1 md:flex-none items-center _gradient_slate fixed top-[70px] z-10">
 
-<li className="mr-3 uppercase font-semibold">
+<li className=" uppercase font-semibold">
         <Link href="/"><a className="inline-block py-2 px-4 text-white no-underline"
          
         >Home</a></Link>
@@ -65,7 +65,7 @@ export default function Mainmenu() {
     <li className="mr-3 uppercase font-semibold">
         <button onClick={()=>router.push('/about-us')}><p className="inline-block py-2 px-4 text-white no-underline"
             // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-        >ABOUT</p></button>
+        >KONTAK</p></button>
     </li>
 
    

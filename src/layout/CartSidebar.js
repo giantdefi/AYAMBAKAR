@@ -69,7 +69,7 @@ return (
 
 
   
-    <div  className={`min-h-screen border-red-800   border-4 overflow-auto mt-24 md:mt-16 fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform  bg-white w-96 
+    <div  className={`min-h-screen border-red-800 shadow-xl overflow-auto mt-24 md:mt-16 fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform  bg-white w-96 
     dark:bg-gray-800 ${!CartSidebar && "translate-x-full"}`}
     >
       <div className="flex items-start justify-between mb-10">
@@ -159,14 +159,15 @@ return (
 
 </section>  
 : <>
-<div className="flex centered border-4 py-4 bg-blue-800 text-white mb-20">
-<p className="bold">Oppss... Tidak ada keranjang belanja</p>
+<div className="flex centered flex-col border-4 py-4 bg-green-600 text-white mb-20">
+<p className="bold">Oppss... Keranjang belanja kosong</p>
+<img src="/assets/img/empty-cart.webp" className="w-[100px] mx-auto mt-4" alt="delivery-order" /> 
 </div>
 <div className="flex flex-col centered ">
-<h4 className="bold mb-4">PESAN ANTAR?</h4>
+<h4 className="bold mb-4 font-DayOne text-4xl text-red-500">PESAN ANTAR?</h4>
 <h4 className="bold mb-4">LEBIH MURAH PESAN LANGSUNG</h4>
 <img src="/assets/img/delivery-order.webp" className="w-[100px] mx-auto mt-4" alt="delivery-order" /> 
-<p className="text-justify mt-10"> Belanja online di aplikasi kami anda akan mendapatkan harga retail standar dengan ongkir yang relatif sama dengan aplikasi GO-FOOD</p>
+<p className="text-justify mt-10"> Belanja online di aplikasi kami anda akan tetap mendapatkan harga retail standar dengan ongkir yang relatif sama dengan aplikasi GO-FOOD</p>
 </div>
 </>
 

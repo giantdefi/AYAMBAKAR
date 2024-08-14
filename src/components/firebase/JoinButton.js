@@ -65,12 +65,12 @@ const JoinButton = (props) => {
                 </svg>
                 LOGIN WITH GOOGLE</div>
             </li>
-            :
-            <li className="border rounded-xl px-2 py-1 hover:bg-blue-900" onClick={handleLogout}>
-              <div className="flex items-center w-full cursor-pointer font-semi-bold" >
+            :<></>
+            // <li className="border-2 rounded-xl px-2 py-1 hover:bg-blue-900" onClick={handleLogout}>
+            //   <div className="flex items-center w-full cursor-pointer font-semi-bold text-white" >
 
-                LOGOUT</div>
-            </li>
+            //     LOGOUT</div>
+            // </li>
           }
         </ul>
       </div>
