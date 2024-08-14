@@ -10,8 +10,8 @@ import { persistStore, persistReducer } from 'redux-persist'
 
 
 import GeneralReducer from 'redux/reducers/GeneralReducer'
+import CartReducer from 'redux/reducers/CartReducer'
 import ErrorReducer from 'redux/reducers/ErrorReducer'
-
 import FormReducer from 'redux/reducers/FormReducer'
 import ModalReducer from 'redux/reducers/ModalReducer'
 import LoaderReducer from 'redux/reducers/LoaderReducer'
@@ -34,6 +34,7 @@ const rootReducer = combineReducers({
 
   AuthReducer,
   ErrorReducer,
+  CartReducer,
   FormReducer,
   GeneralReducer,
   LoaderReducer,
@@ -53,8 +54,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  // whitelist: [],
-  whitelist: ["AuthReducer", "SettingReducer", "ReferralReducer"] //"PersistReducer"
+  whitelist: ["AuthReducer", "SettingReducer", "ReferralReducer", "CartReducer"] //"PersistReducer"
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

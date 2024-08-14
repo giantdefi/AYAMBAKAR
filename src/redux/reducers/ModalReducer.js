@@ -43,6 +43,7 @@ const initialState = {
 
    modalMyEpinsReactivate: false,
    modalConfirmationProcess : false,
+   modalCart : false,
 
 };
 
@@ -162,9 +163,10 @@ export const modalSlice = createSlice({
       state.modalMyEpinsReactivate = action.payload
     }, 
 
-    setModalConfirmationProcess: (state, action) => { 
+    setModalConfirmationProcess: (state, action) => {  
       state.modalConfirmationProcess = action.payload
     }, 
+  
 
     resetModal: () => initialState
   }
@@ -178,7 +180,6 @@ export const { resetModal, setModalMessage, setModalToast, setModalActivateUser,
    setModalConvertPairing, setModalMyEpinsReactivate,
 
    // crypto
-
    setWalletModal, setModalProcess, setModalAllowance, setModalConnectBinance, setModalInstallMetamask,
    setModalReactivatePackage, setModalLoginCloneUser, setModalBinarySearch, setPopupNewUser,
  

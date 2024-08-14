@@ -7,7 +7,7 @@ import ProductJSON from "components/json/Products"
 //---- REDUX STORE ---------------------
 import { useSelector, useDispatch } from 'react-redux'
 import { setPlaySound } from 'redux/reducers/SoundReducer'
-import { addToCart } from 'redux/reducers/CartReducer'
+import { setCartArray } from 'redux/reducers/CartReducer'
 import { setRightSidebar, setLeftSidebar, setCartSidebar } from 'redux/reducers/MainmenuReducer'
 //--------------------------------------
 
@@ -17,19 +17,37 @@ export default function HeaderBoard() {
     const router = useRouter()
     const dispatch = useDispatch()
     const path = pathname.substring(1, 18) // any number except 5
-    const { shoppingCart  } = useSelector((state) => state.CartReducer) 
+    const { cartArray  } = useSelector((state) => state.CartReducer) 
     const [quantity, setQuantity] = useState(2)
 
+    let Arrays = []
+
+    let terus = true
+
+
+   console.log(Arrays)
+
  
+
+
     const handleToCart = (data) => { 
 
-        dispatch(addToCart(data))
+      
+       
+        console.log(data)
+     
+        Arrays.push(data)
+        console.log(Arrays)
+
+        dispatch(setCartArray([...cartArray,Arrays[0]]))
+
         dispatch(setCartSidebar(true))
-              
+     
+       
     }
 
- 
-    console.log(shoppingCart)
+    console.log(Arrays)
+    console.log(cartArray)
 
     return (
         <>

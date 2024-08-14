@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useRef } from "react"
 import Link from 'next/link'
 import Router, { useRouter } from "next/router"
-
+import JoinButton from "components/firebase/JoinButton"
 //---- REDUX STORE ---------------------
 import { useSelector, useDispatch } from 'react-redux'
 import { resetForm } from 'redux/reducers/FormReducer'
 import { resetErrors } from 'redux/reducers/ErrorReducer'
-import { setRightSidebar, setLeftSidebar } from 'redux/reducers/MainmenuReducer'
+import { setRightSidebar, setLeftSidebar, setCartSidebar } from 'redux/reducers/MainmenuReducer'
+import { setModalCart } from 'redux/reducers/ModalReducer'
 //-------------------------------------------------------------------------
 
 export default function Mainmenu() {
@@ -17,8 +18,9 @@ export default function Mainmenu() {
     const [itemLink, setItemLink] = useState()
     const { isLogin, username } = useSelector((state) => state.AuthReducer)
     const { showLogin } = useSelector((state) => state.SidebarReducer)
-    const { rightSidebar } = useSelector((state) => state.MainmenuReducer)
-
+    const { rightSidebar, CartSidebar } = useSelector((state) => state.MainmenuReducer)
+    const { shoppingCart  } = useSelector((state) => state.CartReducer) 
+    
     const handleToggle = () => { 
         dispatch(resetForm())
         dispatch(resetErrors())
@@ -33,11 +35,20 @@ export default function Mainmenu() {
         
     }
 
+    const handlemodalCart = () => {
+        if(CartSidebar){
+            dispatch(setCartSidebar(false))
+        }else{
+            dispatch(setCartSidebar(true))
+        }
+      
+    }
+
 
     return (
         <>
 
-<ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
+<ul className="list-reset flex w-full justify-between flex-1 md:flex-none items-center _gradient_slate fixed top-20 z-10">
 
 <li className="mr-3 uppercase font-semibold">
         <Link href="/"><a className="inline-block py-2 px-4 text-white no-underline"
@@ -46,9 +57,9 @@ export default function Mainmenu() {
     </li>
 
     <li className="mr-3 uppercase font-semibold">
-        <button onClick={()=>router.push('/delivery-order')}><p className="inline-block py-2 px-4 text-white no-underline"
+        <button onClick={()=>router.push('/shopping')}><p className="inline-block py-2 px-4 text-white no-underline"
             // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-        >DELIVERY ORDER</p></button>
+        >BELANJA</p></button>
     </li>
 
     <li className="mr-3 uppercase font-semibold">
@@ -57,34 +68,36 @@ export default function Mainmenu() {
         >ABOUT</p></button>
     </li>
 
-    <li className="mr-3 uppercase font-semibold">
-        <button onClick={()=>router.push('/contact')}><p className="inline-block py-2 px-4 text-white no-underline"
-            // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
-        >CONTACT</p></button>
-    </li>
+   
 
 
     <li className="mr-3 flex centered hidden md:block">
-     {!isLogin? 
-        <button onClick={handleToggle}
-            className="flex justify-center  text-sm text-white  rounded-full  bg-blue-700 
-hover:bg-blue-500 transition ease-in-out duration-300 py-1 border-4 border-gray-400 text-xl px-4">
-          {showLogin ? 'LOGIN' : 'REGISTER'}  
-            </button>
-           
-            
-        :
-       <>
-                                                       
-        <button onClick={()=>router.push('/users')}
-        className="flex justify-center  text-sm text-white hidden lg:block rounded-full  bg-blue-700 
-        hover:bg-blue-500 transition ease-in-out duration-300 py-1 border-4 border-gray-200 text-xl px-4">
-                        DASHBOARD</button>
-       </>
-      
-        
-        }
+    
+        <JoinButton/>
 
+    </li>
+    <li className="mr-3 uppercase font-semibold">
+        <button onClick={handlemodalCart}><p className="inline-block py-2 px-4 text-white no-underline"
+            // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
+        > 
+
+
+        <div class="relative border-4 rounded-lg text-green-200 border-gray-500 _gradient_slate p-2">
+        
+        {shoppingCart && shoppingCart.length > 0 && 
+            <div class="absolute top-[-5px] right-[-10px]">
+            <span class="relative flex h-4 w-4">
+            <span class="animate-ping absolute  h-full w-full rounded-full bg-red-400 opacity-75"></span>
+            <span class=" inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </span>
+            </div>}
+
+
+            <i className="icofont-cart text-3xl"></i>
+        </div>
+                
+     
+        </p></button>
     </li>
 </ul>
 

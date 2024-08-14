@@ -65,7 +65,7 @@ export default function MainHeader() {
 
           {/* {isLogin && <LoadUserData/> } */}
 
-            <nav className="bg-yellow-600 dark:bg-yellow-900 p-2 mt-0 fixed w-full z-10   ">
+            <nav className="_gradient_slate p-2 mt-0 fixed w-full z-10   ">
                 <div className=" mx-auto flex flex-row justify-between">
 
                 <div className="flex h-14 centered sm:justify-center md:justify-start  mx-auto sm:mx-0

@@ -17,6 +17,7 @@ const initialState = {
 
   rightSidebar : false,
   leftSidebar : false,
+  CartSidebar : false,
 }
 
 export const mainMenuSlice = createSlice({
@@ -59,6 +60,9 @@ export const mainMenuSlice = createSlice({
     setLeftSidebar: (state, action) => {
       state.leftSidebar = action.payload
     },
+    setCartSidebar: (state, action) => {
+      state.CartSidebar = action.payload
+    },
 
 
     resetMainmenu: () => initialState
@@ -67,7 +71,7 @@ export const mainMenuSlice = createSlice({
 })
 
 export const { resetMainmenu, setMainMenuItem, setCalculatorBackURL, setMainSidebarOpen, setDropdownOpen, setDrawerMenu, setRightSidebar,setLeftSidebar,
-  setItemSelected, setMenuActive, setUserTopMenu, setMtreeBackURL,
+  setItemSelected, setMenuActive, setUserTopMenu, setMtreeBackURL, setCartSidebar,
   setWalletHighlight
 } = mainMenuSlice.actions
 

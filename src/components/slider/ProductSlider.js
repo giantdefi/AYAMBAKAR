@@ -43,7 +43,7 @@ export default function Mainslider() {
                     >
 
                         <SwiperSlide>
-                        <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
+                        <div className="border-4 rounded-lg shadow-lg overflow-hidden text-gray-700">
                     <img src="/assets/img/products/p-1.webp" alt="Chicken Satay" className="w-full h-48 object-cover"/>
                     <div className="p-4">
                         <h3 className="text-xl font-semibold mb-2">SATE AYAM</h3>
@@ -54,11 +54,11 @@ export default function Mainslider() {
 
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
+                        <div className="border-4 rounded-lg shadow-lg overflow-hidden text-gray-700">
                     <img src="/assets/img/products/p-2.webp" alt="Beef Satay" className="w-full h-48 object-cover"/>
                     <div className="p-4">
                         <h3 className="text-xl font-semibold mb-2">SATE KULIT</h3>
-                        <p className="text-sm text-gray-700 mb-4">Sate kulit ayam yang lezat, bergizi dan berprotein tinggi.</p>
+                        <p className="text-sm text-gray-700 mb-4">Sate kulit ayam yang lezat dan berporotein.</p>
                         {/* <p className="text-lg font-bold text-red-700">Rp. 15.000</p> */}
                     </div>
                 </div>
@@ -66,18 +66,18 @@ export default function Mainslider() {
                         </SwiperSlide>
 
                         <SwiperSlide>
-                        <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
+                        <div className="border-4 rounded-lg shadow-lg overflow-hidden text-gray-700">
                 <img src="/assets/img/products/p-1.webp" alt="Chicken Satay" className="w-full h-48 object-cover"/>
                     <div className="p-4">
                         <h3 className="text-xl font-semibold mb-2">SATE KAMBING</h3>
-                        <p className="text-sm text-gray-700 mb-4">Succulent lamb skewers marinated in aromatic spices.</p>
+                        <p className="text-sm text-gray-700 mb-4">Succulent lamb skewers marinated in a.</p>
                         {/* <p className="text-lg font-bold text-red-700">$16.99</p> */}
                     </div>
                 </div>
                         </SwiperSlide>
 
                         <SwiperSlide>
-                        <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
+                        <div className="border-4 rounded-lg shadow-lg overflow-hidden text-gray-700">
                 <img src="/assets/img/products/p-2.webp" alt="Beef Satay" className="w-full h-48 object-cover"/>
                     <div className="p-4">
                         <h3 className="text-xl font-semibold mb-2">Tofu Satay</h3>

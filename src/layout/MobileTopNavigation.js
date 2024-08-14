@@ -75,7 +75,7 @@ export default function TopNavigation() {
 <LEftSidebar/>
 <RightSidebar/>
 
-<div className="bg-[#663399] sticky top-0  z-10">
+<div className="bg-[#663399] w-full  fixed top-0  z-10">
 <div className="bg-[#800080] dark:bg-slate-900  rounded-br-[10%] rounded-bl-[10%] h-[100px] h-[90px] shadow-sm shadow-gray-200 w-full ">
 
 <nav className="rounded-bl-[40%] px-3 pt-2 flex flex-grow relative justify-between z-10  mx-auto ">

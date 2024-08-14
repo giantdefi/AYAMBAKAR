@@ -1,0 +1,104 @@
+[
+    {
+    "pid": 1,
+    "title": "Sate Ayam",
+    "price" : 20000,
+    "img" : "/assets/img/products/AB-1.webp"
+   
+    },
+    {
+    "pid": 2,
+    "title": "Sate Kulit Ayam",
+    "price" : 18000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+    },
+    {
+    "pid": 3,
+    "title": "Sate Kambing",
+    "price" : 25000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+    },
+    {
+    "pid": 4,
+    "title": "Ayam Bakar Paha",
+    "price" : 16000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+
+    },
+    {
+        "pid": 5,
+        "title": "Ayam Bakar Dada",
+        "price" : 16000,
+           "img" : "/assets/img/products/AB-1.webp"
+          
+        },
+    {
+    "pid": 6,
+    "title": "Ayam Goreng Paha",
+    "price" : 16000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+    },
+    {
+        "pid": 7,
+        "title": "Ayam Goreng Dada",
+        "price" : 16000,
+           "img" : "/assets/img/products/AB-1.webp"
+          
+        },
+    {
+    "pid": 8,
+    "title": "Ayam Penyet Paha",
+    "price" : 16000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+    },
+    {
+        "pid": 9,
+        "title": "Ayam Penyet Dada",
+        "price" : 16000,
+           "img" : "/assets/img/products/AB-1.webp"
+          
+        },
+    {
+    "pid": 10,
+    "title": "Pecel Lele",
+    "price" : 16000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+    },
+    {
+    "pid": 11,
+    "title": "Ayam Bakar Paha + Nasi Putih",
+    "price" : 16000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+    },
+    {
+    "pid": 12,
+     "title": "Ayam Goreng Dada + Nasi Putih",
+     "price" : 16000,
+        "img" : "/assets/img/products/AB-1.webp"
+       
+    },
+    {
+    "pid": 13,
+     "title": "Ayam Penyet Paha + Nasi Putih",
+     "price" : 16000,
+        "img" : "/assets/img/products/AB-1.webp"
+       
+
+    },
+    {
+    "pid": 14,
+        "title": "Ayam Penyet Dada + Nasi Putih",
+        "price" : 16000,
+           "img" : "/assets/img/products/AB-1.webp"
+          
+    }
+    
+   
+]

@@ -14,6 +14,12 @@ const initialState = {
   boardNo : false,
   level : false,
   toggleLogin: false,
+
+  // firebase
+ // isLogin: false,
+  userid: false,
+  email:false
+
 }
 
 export const AuthSlice = createSlice({
@@ -65,15 +71,30 @@ export const AuthSlice = createSlice({
       state.toggleLogin = action.payload
     },
 
+    // firebase
+
+    setLogin: (state, action) => {
+      state.isLogin = action.payload.isLogin,
+      state.userid = action.payload.userid,
+      state.email = action.payload.email
+    },
+    setLogout: (state) => {
+      state.isLogin = false,
+      state.userid = false,
+      state.email = false
+    },
 
 
-    setLogout: () => initialState
+
+    resetAuth: () => initialState
   }
 
 })
 
-export const { setLogout, setUsername, setSponsor, setEmail,  setToken, setIsLogin, setWallet, setBoardNo, 
-  setLevel, setIsStokist, setIsAdmin, setIsActive, setEPin, setActiveRefs, setToggleLogin
+export const { resetAuth, setUsername, setSponsor, setEmail,  setToken, setIsLogin, setWallet, setBoardNo, 
+  setLevel, setIsStokist, setIsAdmin, setIsActive, setEPin, setActiveRefs, setToggleLogin,
+  // firebase
+  setLogin, setLogout
 
 } = AuthSlice.actions
 

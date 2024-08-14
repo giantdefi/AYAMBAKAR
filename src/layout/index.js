@@ -11,10 +11,8 @@ import ModalMessage from "components/modal/ModalMessage"
 import ModalToast from "components/modal/ModalToast"
 import ReferralLink from "components/reflink/ReferralLink"
 import RightSidebar from "layout/RightSidebar"
-// import ModalLogin from "components/modal/ModalLogin";
-// import ModalRegister from "components/modal/ModalRegister";
+import CartSidebar from "layout/CartSidebar"
 import ModalMenuDrawer from "components/modal/ModalMenuDrawer" 
-
 
 import MobileTopNavigation from "./MobileTopNavigation"
 import { setWidth } from 'redux/reducers/GeneralReducer'
@@ -37,19 +35,13 @@ export default function MainLayout({ children }) { // not used yet!
 
 
   const { isLogin } = useSelector((state) => state.AuthReducer)
-  const { mainSidebarOpen } = useSelector((state) => state.MainmenuReducer)
-  const { modalMessage, modalToast, modalMenuDrawer, modalActivateUser, modalConfirmLogOut, modalConfirmTopUp, modalWarningBuyPackage, modalLoginCloneUser,    
-    modalLogin, modalRegister } = useSelector((state) => state.ModalReducer)
-
+  const { mainSidebarOpen, rightSidebar } = useSelector((state) => state.MainmenuReducer)
     const { modalJoinBinary, modalMyEpins, 
-   
-      modalBinarySearch, popupNewUser, modalConvertPairing, modalMyEpinsDashboard,
-      modalConfirmBuyEpin, modalPleaseLogin, modalRedeemPackage, walletModal,
-      modalProcess, modalAllowance, modalConnectBinance, modalInstallMetamask, modalConfirmBuyEpinCrypto, modalSponsorHistorySearch,
-      modalStoclkistSendEpin, modalStockisEpinHistory, modalMyEpinsReactivate, modalConfirmationProcess
-  
+     modalMessage, modalMenuDrawer, modalToast,
+      walletModal, modalProcess, modalAllowance, modalConnectBinance, modalInstallMetamask, 
+       modalConfirmationProcess, modalCart   
     } = useSelector((state) => state.ModalReducer)
-    const { rightSidebar } = useSelector((state) => state.MainmenuReducer)
+  
 
   useEffect(() => { // default when load
        
@@ -82,6 +74,7 @@ export default function MainLayout({ children }) { // not used yet!
     <>
       
       <PlaySound />
+      <CartSidebar/>
     
       {!isLogin && <ReferralLink/> } 
       
@@ -139,9 +132,9 @@ export default function MainLayout({ children }) { // not used yet!
       {modalToast && <ModalToast />}
       {modalMenuDrawer && <ModalMenuDrawer />}
   
-   
     
-
+    
+      
     
 
     </>
