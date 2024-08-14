@@ -20,7 +20,7 @@ const MapComponent = () => {
   console.log(showGooglePopup)
 
   const mapStyles = {
-    height: "40vh",
+    height: "20vh",
     width: "100%",
   
   };
