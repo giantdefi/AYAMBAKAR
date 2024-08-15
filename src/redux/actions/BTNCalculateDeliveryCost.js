@@ -37,10 +37,16 @@ export default function BtnActivateBinary() {
 
     return (
         <>
-          
-                <button onClick={handleLocation} className="w-full my-6 text-white bg-blue-700 hover:bg-blue-800 
+         {!totalDistance &&
+        <div className="mt-6">
+        <img src="/assets/img/map-marker.jpg" width="40" alt="logo" className="mx-auto"/>
+<small >Izinkan aplikai mengkases Lokasi anda untuk Hitung Biaya Pengiriman</small>
+                <button onClick={handleLocation} className="w-full my-2 text-white bg-blue-700 hover:bg-blue-800 
                 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
-                text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  Hitung Biaya Pengiriman</button>
+                text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> Izinkan</button>
+
+        </div>
+}
         
         </>
     )

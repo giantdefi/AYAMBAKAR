@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Router, { useRouter } from "next/router"
 import axios from 'axios'
 
-import JoinButton from "components/firebase/JoinButton"
+// import JoinButton from "components/firebase/JoinButton"
 
  import CartBucket from "./CartBucket"
 // import ReferralLink from "components/reflink/ReferralLink"
@@ -141,7 +141,7 @@ border-white rounded-full -top-2 -end-2 dark:border-gray-900">8</div>
 
                             <li className="mr-3 flex centered hidden md:block">
     
-    <JoinButton/>
+  
 
 </li>
 
