@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
 import Link from 'next/link'
 import Router, { useRouter } from "next/router"
+//import jwt_decode from "jwt-decode"
 
-
+import { jwtDecode } from 'jwt-decode';
 import dynamic from 'next/dynamic'
 const GeoMapMarkers = dynamic(() => import("components/map/GeoMapMarkersCheckOut"), {
   ssr: false,
@@ -33,8 +34,11 @@ export default function MainHeader() {
 
     const handleCallbackResponse = (response) =>{
         console.log(response)
-       // dispatch(setShowGooglePopup(true))
+       const userObject = jwtDecode(response.credential)
+        console.log(userObject)
       }
+
+    
       
         useEffect(() => {
         
