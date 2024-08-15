@@ -17,7 +17,7 @@ export default function Document() {
                 <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Glory:ital,wght@0,100..800;1,100..800&family=Rock+Salt&display=swap" rel="stylesheet"></link>
                 <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet"/>
 
-                <script src="https://accounts.google.com/gsi/client" async defer></script>
+                {/* <script src="https://accounts.google.com/gsi/client" async defer></script> */}
             </Head>
             <body>
                 <Main />

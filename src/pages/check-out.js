@@ -113,12 +113,32 @@ export default function MainHeader() {
     <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
 
     <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
-      <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
+      <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-3xl">
       
       
         <div className="space-y-6">
-       
-       
+        {!shoppingCart.length &&
+        <>
+        <p>Keranjang belanja Kosong!</p>
+         <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
+             
+                <div class=" flex space-x-4">
+                  <div class="rounded-full bg-slate-200 h-10 w-10"></div>
+                  <div class="flex-1 space-y-6 py-1">
+                    <div class="h-2 bg-slate-200 rounded"></div>
+                    <div class="space-y-3">
+                      <div class="grid grid-cols-3 gap-4">
+                        <div class="h-2 bg-slate-200 rounded col-span-2"></div>
+                        <div class="h-2 bg-slate-200 rounded col-span-1"></div>
+                      </div>
+                      <div class="h-2 bg-slate-200 rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </>
+               
+        }
         {shoppingCart && shoppingCart.map((item, index) => {
                 return (
           <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6" key={index}>
