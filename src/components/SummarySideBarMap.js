@@ -86,7 +86,7 @@ export default function MainHeader() {
       }
     
 const handleResetLocation = () => {
- // dispatch(resetMap())
+//dispatch(resetMap())
   dispatch(setShowGooglePopup(true))
 }
 

@@ -16,7 +16,8 @@ export default function Home() {
   const router = useRouter()
   const { CartSidebar } = useSelector((state) => state.MainmenuReducer)
   const { showLogin } = useSelector((state) => state.SidebarReducer)
-  const { shoppingCart, totlaPrice, deliveryCost} = useSelector((state) => state.CartReducer) 
+  const { shoppingCart, totlaPrice, } = useSelector((state) => state.CartReducer) 
+  const {  deliveryCost} = useSelector((state) => state.MapReducer) 
 
   useEffect(() => {
     if(shoppingCart){
@@ -133,14 +134,14 @@ return (
    <div className=" mt-6 bg-gray-500 text-white mb-20">
    <div className=" mt-6">
    <div className="flex justify-between items-center px-5 bold py-4 border-b pb-2 border-slate-800">
-      <p>Total Belanja  </p><p> Rp. {(totlaPrice).toLocaleString('id-ID')+',-'} </p>
+      <p>Total Belanja  </p><p>Rp. {totlaPrice?(totlaPrice).toLocaleString('id-ID')+',-': '0,-'} </p>
+  </div>
+  {/* <div className="flex justify-between items-center px-5 bold py-4 border-b pb-2 border-slate-800">
+      <p>Ongkir GOJEK </p><p>  {totlaPrice?((deliveryCost)).toLocaleString("id-ID")+',-':'0,-'}  </p>
   </div>
   <div className="flex justify-between items-center px-5 bold py-4 border-b pb-2 border-slate-800">
-      <p>Ongkir GOJEK </p><p> Rp. 70.000 ,-  </p>
-  </div>
-  <div className="flex justify-between items-center px-5 bold py-4 border-b pb-2 border-slate-800">
-      <p>Total Pembayaran  </p><p> Rp.{(totlaPrice+70000).toLocaleString('id-ID')+',-'}  </p>
-  </div>
+      <p>Total Pembayaran  </p><p>  {totlaPrice?( totlaPrice + deliveryCost).toLocaleString('id-ID')+',-': "0,-"} </p>
+  </div> */}
   </div>     
   <div className="flex centered">
     <button onClick={handleContunueShopping}  className="w-full my-2 text-white bg-blue-700 hover:bg-blue-800 w-[80%] 
