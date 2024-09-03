@@ -14,11 +14,11 @@ import BTNCalculateDeliveryCost from "redux/actions/BTNCalculateDeliveryCost"
 import { useSelector, useDispatch } from 'react-redux'
 
 import { setToggleLogin } from 'redux/reducers/AuthReducer'
-import { setModalLogin, setModalRegister } from 'redux/reducers/ModalReducer'
+import { setModalLogin, setModalRegister, setModalMapPicker } from 'redux/reducers/ModalReducer'
 import { setRightSidebar, setLeftSidebar, setCartSidebar } from 'redux/reducers/MainmenuReducer'
 import { setTotlaPrice, resetCart, removeCartItem, decreaseQuantity, increaseQuantity} from 'redux/reducers/CartReducer'
 import { resetMap, setShowMap,setUserCoords, setTotalDistance, setDuration, setShowGooglePopup } from 'redux/reducers/MapReducer'
-
+//import { setModalMapPicker } from 'redux/reducers/ModalReducer'
 import { setIsLogin, setName, setEmail, setAuthToken } from 'redux/reducers/AuthReducer'
 //--------------------------------------
 
@@ -85,9 +85,12 @@ export default function MainHeader() {
         dispatch(setIsLogin(true))
       }
     
-const handleResetLocation = () => {
+const handleResetLocation = () => { 
+  dispatch(setShowMap(false)) 
+  dispatch(setShowMap(false)) 
 //dispatch(resetMap())
-  dispatch(setShowGooglePopup(true))
+  //dispatch(setShowGooglePopup(true))
+  dispatch(setModalMapPicker(true))
 }
 
       return (
@@ -164,9 +167,15 @@ const handleResetLocation = () => {
             
            
             </dl>
+
+            
+            <button  className="w-full my-6 text-white bg-blue-700 hover:bg-blue-800 border-4
+  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  Proceed to Payment</button>
           </div>
 
           <GeoMapMarkersCheckOut/>  
+       
           {totalDistance && <>
           <p className="text-sm bold ">Perkiraan Lokasi anda : </p>
           <p className="text-[14px]">{userLocation}</p>
@@ -177,7 +186,7 @@ const handleResetLocation = () => {
         
           <button onClick={handleResetLocation} className="w-full my-6 text-white bg-blue-700 hover:bg-blue-800 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
-  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  Perbaharui Lokasi</button>
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  Lokasi Tidak Akurat?</button>
       
           </>
          
@@ -193,34 +202,6 @@ const handleResetLocation = () => {
     
 
     
-    // const handleCallbackResponse = (response) =>{
-    //     console.log(response)
-    //    const userObject = jwtDecode(response.credential)
-    //     console.log(userObject.name)
-    //     dispatch(setName(userObject.name))
-
-    //     console.log(userObject.email)
-    //     dispatch(setEmail(userObject.email))
-    //     dispatch(setIsLogin(true))
-    //   }
-
-    
-      
-        // useEffect(() => {
-        
-        //  google.accounts.id.initialize({
-        //   client_id : "242591925397-dltgmj8iiuo14i2l5aofbhme2o11d6a8.apps.googleusercontent.com",
-        //   callback : handleCallbackResponse
-        //  })
-      
-        //  google.accounts.id.renderButton(
-        //   document.getElementById("signInDiv"),
-        //   {theme : "outline", size : "large"}
-        //  )
-          
-        //   // eslint-disable-next-line react-hooks/exhaustive-deps
-        // }, [])
-
   
 }
 

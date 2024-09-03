@@ -13,7 +13,7 @@ import ReferralLink from "components/reflink/ReferralLink"
 import RightSidebar from "layout/RightSidebar"
 import CartSidebar from "layout/CartSidebar"
 import ModalMenuDrawer from "components/modal/ModalMenuDrawer" 
-
+import ModalMapPicker from "components/modal/ModalMapPicker" 
 import MobileTopNavigation from "./MobileTopNavigation"
 import { setWidth } from 'redux/reducers/GeneralReducer'
 //--- redux store---------------------------------------
@@ -36,7 +36,7 @@ export default function MainLayout({ children }) { // not used yet!
 
   const { isLogin } = useSelector((state) => state.AuthReducer)
   const { mainSidebarOpen, rightSidebar } = useSelector((state) => state.MainmenuReducer)
-    const { modalJoinBinary, modalMyEpins, 
+    const { modalJoinBinary, modalMyEpins,  modalMapPicker,
      modalMessage, modalMenuDrawer, modalToast,
       walletModal, modalProcess, modalAllowance, modalConnectBinance, modalInstallMetamask, 
        modalConfirmationProcess, modalCart   
@@ -130,7 +130,8 @@ export default function MainLayout({ children }) { // not used yet!
 
       {modalMessage && <ModalMessage />}
       {modalToast && <ModalToast />}
-      {modalMenuDrawer && <ModalMenuDrawer />}
+      {modalMenuDrawer && <ModalMenuDrawer />} 
+      {modalMapPicker && <ModalMapPicker />} 
   
     
     

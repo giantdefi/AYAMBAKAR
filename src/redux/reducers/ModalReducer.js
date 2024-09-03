@@ -22,6 +22,7 @@ const initialState = {
   modalStockisEpinHistory: false,
   modalConfirmBuyEpin : false,
   modalConvertPairing : false,
+  modalMapPicker : false,
 
    // metamask
    walletModal: false,
@@ -166,6 +167,10 @@ export const modalSlice = createSlice({
     setModalConfirmationProcess: (state, action) => {  
       state.modalConfirmationProcess = action.payload
     }, 
+
+    setModalMapPicker: (state, action) => {  
+      state.modalMapPicker = action.payload
+    }, 
   
 
     resetModal: () => initialState
@@ -177,7 +182,7 @@ export const { resetModal, setModalMessage, setModalToast, setModalActivateUser,
    setModalWarningBuyPackage, setModalSuccessRanking, setModalMenuDrawer, setCloseModal, setModalLogin, setModalRegister,
    setModalRedeemPackage,setModalConfirmBuyEpin,
    setModalJoinBinary,setModalMyEpins,setModalMyEpinsDashboard, setModalStoclkistSendEpin,setModalSponsorHistorySearch,setModalStockisEpinHistory,
-   setModalConvertPairing, setModalMyEpinsReactivate,
+   setModalConvertPairing, setModalMyEpinsReactivate,setModalMapPicker,
 
    // crypto
    setWalletModal, setModalProcess, setModalAllowance, setModalConnectBinance, setModalInstallMetamask,

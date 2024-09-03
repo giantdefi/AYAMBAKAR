@@ -56,6 +56,7 @@ const handleClose = () => {
 
 const handleContunueShopping = ()=> {
   handleClose()
+  router.push('/shopping')
 }
 
 const handleClearCart = ()=> {
@@ -131,9 +132,9 @@ return (
                                )
                               })} 
    </div>
-   <div className=" mt-6 bg-gray-500 text-white mb-20">
+   <div className=" mt-6 bg-gray-100 text-white mb-20">
    <div className=" mt-6">
-   <div className="flex justify-between items-center px-5 bold py-4 border-b pb-2 border-slate-800">
+   <div className="flex justify-between items-center px-5 bold py-4 border-b pb-2 border-slate-800 text-gray-900">
       <p>Total Belanja  </p><p>Rp. {totlaPrice?(totlaPrice).toLocaleString('id-ID')+',-': '0,-'} </p>
   </div>
   {/* <div className="flex justify-between items-center px-5 bold py-4 border-b pb-2 border-slate-800">

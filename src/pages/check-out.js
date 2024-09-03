@@ -148,7 +148,7 @@ export default function MainHeader() {
                 <img className="hidden h-20 w-20 dark:block" src={item.img} alt="imac image" />
               </a>
 
-              <label htmlFor="counter-input" className="sr-only">Choose quantity:</label>
+           
               <div className="flex items-center justify-between md:order-3 md:justify-end">
                 <div className="flex items-center">
                   <button onClick={()=>handleDecreaseQty(item)} type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
@@ -165,17 +165,18 @@ export default function MainHeader() {
                   </button>
                 </div>
                 <div className="text-end md:order-4 md:w-32">
-                  <p className="text-base font-bold text-gray-900 dark:text-white">Rp. {item.quantity*item.price}</p>
+                  <p className="text-base font-bold text-orange-900 dark:text-white">Rp. {(item.quantity*item.price).toLocaleString('id-ID')+',-'}</p>
                 </div>
               </div>
 
               <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white">{item.title}</a>
+                <div className="text-base font-medium text-gray-900  dark:text-white"><span className="bold">{item.title}</span> <br/> <span className="text-[12px] text-yellow-800">Rp. {(item.price).toLocaleString('id-ID')+',-'}</span> </div>
+                
                 <p>Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi</p>
                 <div className="flex items-center gap-4">
                  
 
-                  <button onClick={()=>handleRemoveItem(item)} type="button" className="inline-flex items-center text-sm font-medium text-yellow-600 hover:underline dark:text-red-500">
+                  <button onClick={()=>handleRemoveItem(item)} type="button" className="inline-flex items-center text-sm font-medium text-orange-700 hover:underline dark:text-red-500">
                     <i className="icofont-trash mr-2"></i>
                     Remove
                   </button>

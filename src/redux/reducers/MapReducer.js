@@ -19,6 +19,8 @@ const initialState = {
 
    showGooglePopup : false,
 
+   mapLoaded : false
+
 }
 
 export const UsersSlice = createSlice({
@@ -47,13 +49,17 @@ export const UsersSlice = createSlice({
         setUserLocation: (state, action) => {
             state.userLocation = action.payload
         },
+        setMapLoaded: (state, action) => {
+            state.mapLoaded = action.payload
+        },
 
         resetMap: () => initialState
     }
 
 })
 
-export const { resetMap, setShowMap, setUserCoords,setTotalDistance, setDuration, setShowGooglePopup, setDeliveryCost, setUserLocation
+export const { resetMap, setShowMap, setUserCoords,setTotalDistance, setDuration, setShowGooglePopup, setDeliveryCost, setUserLocation,
+    setMapLoaded
  
 
 } = UsersSlice.actions

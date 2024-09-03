@@ -110,7 +110,7 @@ console.log(data)
                     dispatch(setLoadUsername(setting_level_1_username)) // allow reload with the same top level 1 username with setting
                     dispatch(setLatestActive(false)) // allow to reload
                     dispatch(resetAffiliate()) // reload all achivement 3 items in one call
-                   dispatch(setAllowReloadUsers(true)) // will be done in topNavigation
+                 //  dispatch(setAllowReloadUsers(true)) // will be done in topNavigation
                    // dispatch(setBonusSponsorHistory(false)) // allow reload
 
                     router.push('/users/m-tree')
