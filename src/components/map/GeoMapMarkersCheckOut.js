@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, LoadScript, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 import { setShowMap,setUserCoords, setTotalDistance, setDuration, setShowGooglePopup, setDeliveryCost, setUserLocation } from 'redux/reducers/MapReducer'
 import { useSelector, useDispatch } from 'react-redux'
+import { setModalMessage, setModalMapPicker, setModalToast } from 'redux/reducers/ModalReducer'
 //=========================================================
 const MapComponent = () => {
 
@@ -15,7 +16,7 @@ const MapComponent = () => {
   const [zomm, setZoom] = useState(16);
   const [activeMarker, setActiveMarker] = useState(null);
   //const [showMap, setShowMap] = useState(false);
-  const { showMap, userCoords, showGooglePopup, basicCost, costperKM } = useSelector((state) => state.MapReducer)
+  const { showMap, userCoords, showGooglePopup, basicCost, costperKM, totalDistance } = useSelector((state) => state.MapReducer)
 
   console.log(showGooglePopup)
 
@@ -25,6 +26,16 @@ const MapComponent = () => {
     width: "100%",
   
   };
+
+  // useEffect(() => {
+  //   if(parseFloat(totalDistance) > 20) {
+  //   //  alert('MAAF,JARAK TERLALU JAUH')
+  //     console.log('MAAF,JARAK TERLALU JAUH')
+  //   }
+  //   }, [totalDistance])
+
+    console.log('--------------------totalDistance')
+    console.log(totalDistance)
 
   useEffect(() => {
     dispatch(setShowMap(false)) 
@@ -127,7 +138,14 @@ const MapComponent = () => {
             dispatch(setDuration(result.routes[0].legs[0].duration.text))
             console.log(result.routes[0].legs[0].distance.text)
             console.log(result.routes[0].legs[0].distance.value)
-            const delprice = basicCost + (result.routes[0].legs[0].distance.value/1000 * costperKM)
+            const totaldistance = result.routes[0].legs[0].distance.value/1000
+            if(totaldistance > 10) {
+            console.log('MAAF,JARAK TERLALU JAUH')
+            dispatch(setModalMapPicker(false))
+              dispatch(setModalToast({ type: 'error', title: "TERLALU JAUH!", message: 'Maaf jarak melebihi 10 KM' }))
+             
+            }
+            const delprice = basicCost + (totaldistance * costperKM)
             console.log(Math.ceil(delprice))
            dispatch(setDeliveryCost(Math.ceil(delprice)))
             // Calculate distance

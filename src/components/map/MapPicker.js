@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import MapPicker from 'react-google-map-picker'
 
@@ -18,7 +18,7 @@ const App = () => {
   const [zoom, setZoom] = useState(DefaultZoom); 
   const {  userCoords, totalDistance } = useSelector((state) => state.MapReducer)
 
-
+  
   
 const handleChangeLocationBtn = () => {
 //  dispatch(setShowMap(true)) 
