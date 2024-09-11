@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 const moment = require('moment')
-import TopMenu from "layout/TopMenu"
+import FloatingCart from "layout/FloatingCart"
 import dynamic from 'next/dynamic'
 import LEftSidebar from "layout/LEftSidebar"
 import RightSidebar from "layout/RightSidebar"
@@ -71,7 +71,7 @@ export default function TopNavigation() {
 
     return (
         <>
-
+<FloatingCart/>
 <LEftSidebar/>
 <RightSidebar/>
 
@@ -134,7 +134,7 @@ export default function TopNavigation() {
 </div>
 </div>
 
-<TopMenu/>
+{/* <FloatingCart/> */}
         </>
     )
 }

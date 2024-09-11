@@ -40,7 +40,7 @@ const initialState = {
    modalAdminPaymentWD: false,
    modalBinarySearch: false,
 
-   popupNewUser: false,
+   modalCartButton: true,
 
    modalMyEpinsReactivate: false,
    modalConfirmationProcess : false,
@@ -156,8 +156,8 @@ export const modalSlice = createSlice({
       state.modalBinarySearch = action.payload
     },
 
-    setPopupNewUser: (state, action) => {
-      state.popupNewUser = action.payload
+    setModalCartButton: (state, action) => {
+      state.modalCartButton = action.payload
     }, 
 
     setModalMyEpinsReactivate: (state, action) => { 
@@ -188,7 +188,7 @@ export const { resetModal, setModalMessage, setModalToast, setModalActivateUser,
    setWalletModal, setModalProcess, setModalAllowance, setModalConnectBinance, setModalInstallMetamask,
    setModalReactivatePackage, setModalLoginCloneUser, setModalBinarySearch, setPopupNewUser,
  
-   setModalAdminPaymentWD, setModalConfirmationProcess
+   setModalAdminPaymentWD, setModalConfirmationProcess, setModalCartButton
 } = modalSlice.actions;
 
 export default modalSlice.reducer;

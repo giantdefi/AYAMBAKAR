@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import MapPicker from 'react-google-map-picker'
 
@@ -12,17 +12,17 @@ const App = () => {
 
     const dispatch = useDispatch()
  // const [storeCords, setStore] = useState({lat: -6.236578,lng: 106.9826});
-  const [defaultLocation, setDefaultLocation] = useState(DefaultLocation);
+ 
   const { showMap } = useSelector((state) => state.MapReducer)
   const [location, setLocation] = useState(defaultLocation);
   const [zoom, setZoom] = useState(DefaultZoom); 
   const {  userCoords, totalDistance } = useSelector((state) => state.MapReducer)
+ const [defaultLocation, setDefaultLocation] = useState(userCoords);
 
   
-  
 const handleChangeLocationBtn = () => {
-//  dispatch(setShowMap(true)) 
-  dispatch(setModalMapPicker(false))
+   dispatch(setShowMap(true)) 
+   dispatch(setModalMapPicker(false))
 }
 
   function handleChangeLocation (lat, lng){ 
@@ -65,7 +65,7 @@ const handleChangeLocationBtn = () => {
   <label>Zoom:</label><input type='text' value={zoom} />
    */}
   <MapPicker defaultLocation={defaultLocation}
-    zoom={zoom}
+    zoom={18}
     scrollwheel = {true}
     disableDefaultUI={false}
     navigationControl={false}
@@ -78,7 +78,7 @@ const handleChangeLocationBtn = () => {
 
    </section>
 
-   <button onClick={handleChangeLocationBtn} className="w-full mt-4  text-white bg-orange-700 hover:bg-blue-800 
+   <button onClick={handleChangeLocationBtn} className="w-full mt-4  text-white bg-orange-700 hover:bg-orange-800 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  SIMPAN LOKASI</button>
   </> 

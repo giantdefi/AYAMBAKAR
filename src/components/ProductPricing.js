@@ -7,7 +7,8 @@ import ProductJSON from "components/json/Products"
 //---- REDUX STORE ---------------------
 import { useSelector, useDispatch } from 'react-redux'
 import { setPlaySound } from 'redux/reducers/SoundReducer'
-import { addToCart } from 'redux/reducers/CartReducer'
+import { addToCart, setSelectedItem } from 'redux/reducers/CartReducer'
+import { setModalCartButton } from 'redux/reducers/ModalReducer'
 import { setRightSidebar, setLeftSidebar, setCartSidebar } from 'redux/reducers/MainmenuReducer'
 //--------------------------------------
 
@@ -22,10 +23,14 @@ export default function HeaderBoard() {
 
  
     const handleToCart = (data) => { 
-
+        console.log(data)
         dispatch(addToCart(data))
-        dispatch(setCartSidebar(true))
-              
+        dispatch(setSelectedItem(data))
+      //  dispatch(setCartSidebar(true))
+        dispatch(setModalCartButton(false))  
+        setTimeout(()=>{
+            dispatch(setModalCartButton(true))  
+        },500)    
     }
 
  
@@ -44,10 +49,10 @@ export default function HeaderBoard() {
                     <img src={item.img} alt="Chicken Satay" className="w-full h-48 object-cover"/>
                     <div className="p-4">
                         <h3 className="text-[15px] bold leading-4 mb-2">{item.title}</h3>
-                        <p className="text-sm text-gray-700 ">Tender chicken skewers marinated in rich spices.</p>
+                        <p className="hidden md:block text-sm text-gray-700 ">{item.desc}</p>
                         <p className="text-lg font-bold text-red-700">Rp. {(item.price).toLocaleString('id-ID')+',-'}</p>
                     </div>
-                    <button onClick={()=>handleToCart(ProductJSON[index])} className="w-full  text-white bg-blue-700 hover:bg-blue-800 
+                    <button onClick={()=>handleToCart(ProductJSON[index])} className="w-full  text-gray-800 border bg-sky-300  hover:bg-sky-600 hover:text-white 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i className="icofont-cart-alt text-2xl"></i>Masuk Keranjang</button>
                 </div>

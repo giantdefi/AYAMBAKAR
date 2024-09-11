@@ -2,27 +2,31 @@
     {
     "pid": 1,
     "title": "Sate Ayam",
+    "desc" : "Dari daging ayam paha atas yang berkualitas dan penuh rasa",
     "price" : 20000,
-    "img" : "/assets/img/products/AB-1.webp"
+    "img" : "/assets/img/products/p-1.webp"
    
     },
     {
     "pid": 2,
     "title": "Sate Kulit Ayam",
+    "desc" : "Sate dari kulit ayam yang sedang viral, gurih, berlemak dan penuh protein",
     "price" : 18000,
-       "img" : "/assets/img/products/AB-1.webp"
+       "img" : "/assets/img/products/p-4.webp"
       
     },
     {
     "pid": 3,
     "title": "Sate Kambing",
+    "desc" : "Sate Kambing Muda yang enak, lembut dan gurih",
     "price" : 25000,
-       "img" : "/assets/img/products/AB-1.webp"
+       "img" : "/assets/img/products/p-2.webp"
       
     },
     {
     "pid": 4,
     "title": "Ayam Bakar Paha",
+    "desc" : "AYam bakar paha yang lembut dengan sambal yang super Joss",
     "price" : 16000,
        "img" : "/assets/img/products/AB-1.webp"
       
@@ -32,7 +36,7 @@
         "pid": 5,
         "title": "Ayam Bakar Dada",
         "price" : 16000,
-           "img" : "/assets/img/products/AB-1.webp"
+           "img" : "/assets/img/products/AB-2.webp"
           
         },
     {

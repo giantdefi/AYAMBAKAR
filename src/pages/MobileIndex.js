@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react"
 import Link from 'next/link'
 import Router, { useRouter } from "next/router"
 import Head from 'next/head'
-import LEftSidebar from "layout/LEftSidebar"
-import RightSidebar from "layout/RightSidebar"
+import ProductPricing from "components/ProductPricing"
 import dynamic from 'next/dynamic'
 const RealestateSlider = dynamic(() => import("components/slider/RealestateSlider"), {
   ssr: false,
@@ -71,7 +70,7 @@ return (
 
     
 {/* bg-[#ffd4d5] */}
-    <section className="min-h-screen pb-5 dark:text-white animated fadeIn mt-[0px]">
+    <section className="min-h-screen pb-5 dark:text-white animated fadeIn mt-[90px]">
  
       <div className="w-full  mx-auto text-white">
 
@@ -85,56 +84,31 @@ return (
         </div>
     </section>
 
+    <p className="text-gray-800 bold mt-10 ml-20">Tersedia di :</p>
+  
+    <div className="bg-white flex flex-row w-full">
+    <div className="w-1/2">
+    <img src="/assets/img/gofood.png" alt="Beef Satay" className="bg-white"/>
+    </div>
+    <div className="flex centered w-1/2">
+    <a href="https://gofood.co.id/jakarta/restaurant/ayam-bakar-patriot-perumnas-1-kec-bekasi-selatan-bekasi-67f72bb5-6c34-4428-b748-4f34f9c769b4" target="_blank" rel={"noreferrer"}  className="w-10/12 mx-auto ml-4 my-6 text-white bg-red-700 hover:bg-red-800 
+  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >  LIHAT DI GOFOOD</a>
+    </div>
+    </div>
+    <div className="bg-sky-800  flex flex-row w-full mt-6">
+    <h2 className="text-3xl font-bold text-center text-white mb-4 p-10">
+      Dapatkan super diskon hingga 50% dari harga di GoFood jika makan ditempat atau belanja melalui aplikasi ini.</h2>
+    </div>
+   
     <ProductSlider/>
 
     <section className="py-20 bg-white px-2">
         <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-center text-red-700">Our Satay Products</h2>
-            <div className="mt-8 grid lg:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
-              
-                <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
-                    <img src="/assets/img/products/p-1.webp" alt="Chicken Satay" className="w-full h-48 object-cover"/>
-                    <div className="p-4">
-                        <h3 className="text-xl font-semibold mb-2">SATE AYAM</h3>
-                        <p className="text-sm text-gray-700 mb-4">Tender chicken skewers marinated in rich spices.</p>
-                        <p className="text-lg font-bold text-red-700">$12.99</p>
-                    </div>
-                </div>
-
-              
-                <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
-                    <img src="/assets/img/products/p-2.webp" alt="Beef Satay" className="w-full h-48 object-cover"/>
-                    <div className="p-4">
-                        <h3 className="text-xl font-semibold mb-2">SATE KULIT</h3>
-                        <p className="text-sm text-gray-700 mb-4">Sate kulit ayam yang lezat, bergizi dan berprotein tinggi.</p>
-                        <p className="text-lg font-bold text-red-700">Rp. 15.000</p>
-                    </div>
-                </div>
-
-              
-                <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
-                <img src="/assets/img/products/p-1.webp" alt="Chicken Satay" className="w-full h-48 object-cover"/>
-                    <div className="p-4">
-                        <h3 className="text-xl font-semibold mb-2">SATE KAMBING</h3>
-                        <p className="text-sm text-gray-700 mb-4">Succulent lamb skewers marinated in aromatic spices.</p>
-                        <p className="text-lg font-bold text-red-700">$16.99</p>
-                    </div>
-                </div>
-
-               
-                <div className="border rounded-lg shadow-lg overflow-hidden text-gray-700">
-                <img src="/assets/img/products/p-2.webp" alt="Beef Satay" className="w-full h-48 object-cover"/>
-                    <div className="p-4">
-                        <h3 className="text-xl font-semibold mb-2">Tofu Satay</h3>
-                        <p className="text-sm text-gray-700 mb-4">Grilled tofu skewers with a spicy peanut sauce.</p>
-                        <p className="text-lg font-bold text-red-700">$10.99</p>
-                    </div>
-                </div>
-
-               
+           
+          <ProductPricing/>     
                 
-            </div>
+          
         </div>
     </section>
 

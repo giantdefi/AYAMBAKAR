@@ -9,11 +9,12 @@ import UserTopNavigation from "./UserTopNavigation"
 import FirebaseSidebar from "menu/FirebaseSidebar"
 import ModalMessage from "components/modal/ModalMessage"
 import ModalToast from "components/modal/ModalToast"
-import ReferralLink from "components/reflink/ReferralLink"
+//import ReferralLink from "components/reflink/ReferralLink"
 import RightSidebar from "layout/RightSidebar"
 import CartSidebar from "layout/CartSidebar"
 import ModalMenuDrawer from "components/modal/ModalMenuDrawer" 
 import ModalMapPicker from "components/modal/ModalMapPicker" 
+import CartModakButton from "components/modal/CartModakButton" 
 import MobileTopNavigation from "./MobileTopNavigation"
 import { setWidth } from 'redux/reducers/GeneralReducer'
 //--- redux store---------------------------------------
@@ -31,7 +32,7 @@ export default function MainLayout({ children }) { // not used yet!
   const { asPath, pathname } = useRouter()
   const path = pathname.substring(1, 6)
 
-  const { width } = useSelector((state) => state.GeneralReducer)
+  const { width, title } = useSelector((state) => state.GeneralReducer)
 
 
   const { isLogin } = useSelector((state) => state.AuthReducer)
@@ -39,7 +40,7 @@ export default function MainLayout({ children }) { // not used yet!
     const { modalJoinBinary, modalMyEpins,  modalMapPicker,
      modalMessage, modalMenuDrawer, modalToast,
       walletModal, modalProcess, modalAllowance, modalConnectBinance, modalInstallMetamask, 
-       modalConfirmationProcess, modalCart   
+       modalConfirmationProcess, modalCart, modalCartButton  
     } = useSelector((state) => state.ModalReducer)
   
 
@@ -76,7 +77,7 @@ export default function MainLayout({ children }) { // not used yet!
       <PlaySound />
       <CartSidebar/>
     
-      {!isLogin && <ReferralLink/> } 
+     
       
 
    
@@ -85,11 +86,11 @@ export default function MainLayout({ children }) { // not used yet!
       <main className="w-full  min-h-screen">
         <section className={isLogin?
           width > 760 ?
-       "text-slate-900 dark:text-white w-full mx-auto bg-slate-200 dark:bg-slate-700  bg-fixed bg-cover max-w-md md:max-w-full  z-1 dark:bg-[url('/assets/img/bg/user-bg.webp')]" 
+       "text-slate-900 dark:text-white w-full mx-auto bg-white bg-slate-200 dark:bg-slate-700  bg-fixed bg-cover max-w-md md:max-w-full  z-1 dark:bg-[url('/assets/img/bg/user-bg.webp')]" 
        :
-       "text-slate-900 dark:text-white w-full mx-auto  dark:bg-slate-800 bg-fixed bg-cover max-w-md md:max-w-full  z-1 " 
+       "text-slate-900 dark:text-white w-full mx-auto bg-white dark:bg-slate-800 bg-fixed bg-cover max-w-md md:max-w-full  z-1 " 
        :
-       "text-slate-900 dark:text-white w-full mx-auto  bg-slate-700 bg-fixed bg-cover max-w-md md:max-w-full  z-1 " 
+       "text-slate-900 dark:text-white w-full mx-auto  bg-white bg-fixed bg-cover max-w-md md:max-w-full  z-1 " 
         }
        >
        
@@ -132,6 +133,7 @@ export default function MainLayout({ children }) { // not used yet!
       {modalToast && <ModalToast />}
       {modalMenuDrawer && <ModalMenuDrawer />} 
       {modalMapPicker && <ModalMapPicker />} 
+      {modalCartButton && <CartModakButton/> }
   
     
     

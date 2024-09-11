@@ -56,7 +56,7 @@ const handleClose = () => {
 
 const handleContunueShopping = ()=> {
   handleClose()
-  router.push('/shopping')
+  //router.push('/shopping')
 }
 
 const handleClearCart = ()=> {
@@ -150,12 +150,12 @@ return (
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 uppercase"> <i class="icofont-cart-alt text-2xl"></i> Teruskan Belanja</button>   
              </div>    
   <div className="flex centered">
-    <button onClick={handleClearCart} className="w-full my-2 text-white bg-green-900 hover:bg-green-800 w-[80%] 
+    <button onClick={handleClearCart} className="w-full my-2 text-white bg-red-900 hover:bg-green-800 w-[80%] 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  px-5 py-2.5 
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  uppercase"><i class="icofont-trash"></i>  Bersihkan Keranjang</button>   
              </div> 
              <div className="flex centered">
-    <button onClick={handleCheckOut}  className="w-full my-2 text-white bg-green-900 hover:bg-green-800 w-[80%] 
+    <button onClick={handleCheckOut}  className="w-full my-2 text-white bg-orange-700 hover:bg-green-800 w-[80%] 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  uppercase">  Check Out</button>   
              </div> 

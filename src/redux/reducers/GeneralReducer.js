@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     masterUser: 'TURBO1', // for not login user to see m-tree
-    domain: 'https://dmtgold.com',
+    domain: 'https://ayambakarpatriot.com',
     title: 'AYAM BAKAR PATRIOT',
     desc: 'DMTGOLD COMMUNITY',
     currency: 'Wallet',

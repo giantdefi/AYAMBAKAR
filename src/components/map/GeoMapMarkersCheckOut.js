@@ -140,9 +140,9 @@ const MapComponent = () => {
             console.log(result.routes[0].legs[0].distance.value)
             const totaldistance = result.routes[0].legs[0].distance.value/1000
             if(totaldistance > 10) {
-            console.log('MAAF,JARAK TERLALU JAUH')
+            console.log('MAAF,TIDAK TERJANGKAU')
             dispatch(setModalMapPicker(false))
-              dispatch(setModalToast({ type: 'error', title: "TERLALU JAUH!", message: 'Maaf jarak melebihi 10 KM' }))
+              dispatch(setModalToast({ type: 'error', title: "DILUAR JANGKAUAN!", message: 'Maaf lokasi anda diluar jangkauan pengiriman' }))
              
             }
             const delprice = basicCost + (totaldistance * costperKM)

@@ -16,7 +16,7 @@ import FormReducer from 'redux/reducers/FormReducer'
 import ModalReducer from 'redux/reducers/ModalReducer'
 import LoaderReducer from 'redux/reducers/LoaderReducer'
 
-import ReferralReducer from 'redux/reducers/ReferralReducer'
+//import ReferralReducer from 'redux/reducers/ReferralReducer'
 import AuthReducer from 'redux/reducers/AuthReducer'
 
 import SidebarReducer from 'redux/reducers/SidebarReducer'
@@ -42,7 +42,7 @@ const rootReducer = combineReducers({
   ModalReducer,
   MapReducer,
   PersistReducer,
-  ReferralReducer,
+  //ReferralReducer,
   SoundReducer,
   SettingReducer,
   SidebarReducer,

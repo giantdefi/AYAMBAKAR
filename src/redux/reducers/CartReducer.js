@@ -4,7 +4,9 @@ const initialState = {
 
    shoppingCart : [],
    totlaPrice : false,
-   deliveryCost : false
+   deliveryCost : false,
+
+   selectedItem : false,
 
 
 }
@@ -60,6 +62,9 @@ export const CartSlice = createSlice({
         setDeliveryCost: (state, action) => {
             state.deliveryCost = action.payload
         },
+        setSelectedItem: (state, action) => {
+            state.selectedItem = action.payload
+        },
        
 
 
@@ -70,7 +75,7 @@ export const CartSlice = createSlice({
 
 export const { 
 
-    resetCart, addToCart, setTotlaPrice, deliveryCost, removeCartItem, decreaseQuantity, increaseQuantity
+    resetCart, addToCart, setTotlaPrice, deliveryCost, removeCartItem, decreaseQuantity, increaseQuantity, setSelectedItem
 
 } = CartSlice.actions
 

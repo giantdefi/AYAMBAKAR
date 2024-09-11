@@ -171,8 +171,12 @@ const handleResetLocation = () => {
             
             <button  className="w-full my-6 text-white bg-blue-700 hover:bg-blue-800 border-4
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
-  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  Proceed to Payment</button>
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  LANJUT KE PEMBAYARAN</button>
           </div>
+
+          <button onClick={handleResetLocation} className="w-full my-6 text-white bg-red-700 hover:bg-red-800 
+  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  LOKASI TIDAK AKURAT? PERBAHARUI</button>
 
           <GeoMapMarkersCheckOut/>  
        
@@ -184,9 +188,7 @@ const handleResetLocation = () => {
           <p className="mt-2 text-sm  text-gray-600 bold">Waktu perjalanan ditempuh jika tanpa hambatan paling cepat : {' ' +duration}  </p>
 
         
-          <button onClick={handleResetLocation} className="w-full my-6 text-white bg-blue-700 hover:bg-blue-800 
-  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
-  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  Lokasi Tidak Akurat?</button>
+      
       
           </>
          

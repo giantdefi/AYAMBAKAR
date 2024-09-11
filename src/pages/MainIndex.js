@@ -4,29 +4,18 @@ import Router, { useRouter } from "next/router"
 
 
 import Head from 'next/head'
-import LEftSidebar from "layout/LEftSidebar"
-import RightSidebar from "layout/RightSidebar"
-import ProductPricing from "components/ProductPricing"
+
 
 import dynamic from 'next/dynamic'
-const RealestateSlider = dynamic(() => import("components/slider/RealestateSlider"), {
-  ssr: false,
-})
-
 
 const ProductSlider = dynamic(() => import("components/slider/ProductSlider"), {
-  ssr: false,
-})
-const GeoMapMarkers = dynamic(() => import("components/map/GeoMapMarkers"), {
   ssr: false,
 })
 
 //---- REDUX STORE ---------------------
 import { useSelector, useDispatch } from 'react-redux'
-import { setSpinnerAtLogo } from 'redux/reducers/LoaderReducer'
-import { setbackURLs } from 'redux/reducers/MainmenuReducer'
 import { setMainMenuItem } from 'redux/reducers/MainmenuReducer'
-import { setBordingOnMainHeader, setShoWConnectWallet } from 'redux/reducers/SettingReducer'
+
 import {setToggleLogin } from 'redux/reducers/AuthReducer'
 //--------------------------------------
 
@@ -34,11 +23,7 @@ export default function Home() {
 
  const dispatch = useDispatch()
   const router = useRouter()
-  const [spinner, setSpinner] = useState(false)
-  const [toggle, setToggle] = useState(false)
-  const { domain, title, desc } = useSelector((state) => state.GeneralReducer)
-  const { isLogin, phone, email, toggleLogin } = useSelector((state) => state.AuthReducer)
-  const { rightSidebar } = useSelector((state) => state.MainmenuReducer)
+  const { title, desc } = useSelector((state) => state.GeneralReducer)
 
 
   useEffect(() => {
@@ -62,7 +47,7 @@ return (
 
     <div>
 
-      <section className="relative min-h-screen bg-gray-200 dark:bg-gray-700 animated fadeIn">
+      <section className="relative min-h-screen bg-gray-200 dark:bg-gray-700 animated fadeIn pt-40">
 
   
         <div className="_gradient_purple/90 w-full h-[600px] bg-cover bg-fixedAA  "
@@ -90,7 +75,29 @@ return (
       <p className="mt-6 text-lg leading-8 text-gray-600">Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
     </div>
 
-    {/* <RealestateSlider /> */}
+  
+    <p className="text-gray-800 bold mt-10">Tersedia di :</p>
+  
+    <div className="bg-white flex flex-row w-full">
+    <div className="mx-auto w-1/2">
+    <img src="/assets/img/gofood.png" alt="Beef Satay" className="bg-white"/>
+   
+    <div className="flex centered w-1/2 border mx-auto">
+    <a href="https://gofood.co.id/jakarta/restaurant/ayam-bakar-patriot-perumnas-1-kec-bekasi-selatan-bekasi-67f72bb5-6c34-4428-b748-4f34f9c769b4" target="_blank" rel={"noreferrer"}  className="w-10/12 mx-auto ml-4 my-6 text-white bg-red-700 hover:bg-red-800 
+  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " >  LIHAT DI GOFOOD</a>
+    </div>
+ </div>
+
+    </div>
+    <div className="bg-sky-800  flex flex-row w-full mt-10">
+    <h2 className="text-3xl font-bold text-center text-white mb-4">
+      Dapatkan super diskon hingga 50% dari harga di GoFood jika makan ditempat atau belanja melalui aplikasi ini.</h2>
+    </div>
+   
+
+
+
 
     <ProductSlider/>
 

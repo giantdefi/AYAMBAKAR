@@ -9,7 +9,7 @@ import { setError } from 'redux/reducers/ErrorReducer'
 import { resetForm } from 'redux/reducers/FormReducer'
 import { setRightSidebar } from 'redux/reducers/MainmenuReducer'
 
-import { setIsLogin, setUsername, setSponsor, setIsAdmin,setIsActive,setIsStokist,  } from 'redux/reducers/AuthReducer'
+import { setIsLogin, setUsername, setSponsor, setIsAdmin,setIsActive,setIsStokist, setToken, setWallet, setLevel, setBoardNo } from 'redux/reducers/AuthReducer'
 //--------------------------------------
 
 export default function BtnActivateBinary() {
