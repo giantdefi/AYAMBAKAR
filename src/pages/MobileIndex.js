@@ -76,7 +76,7 @@ return (
 
  <section className="bg-cover bg-center text-white py-4  bg-[url('/assets/img/bg/burner.webp')]" >
         <div className="container mx-auto text-center h-[300px]">
-            <h1 className="text-2xl md:text-5xl font-bold font-rocksalt">SATE & AYAM BAKAR </h1>
+            <h1 className="text-2xl md:text-5xl font-bold font-rocksalt mt-4">SATE & AYAM BAKAR </h1>
             <h1 className="text-6xl md:text-7xl font-bold mt-4 font-DayOne">PATRIOT</h1>
             <h1 className="text-2xl md:text-7xl font-bold mt-4 ">Stadion Patriot Bekasi Selatan</h1>
            
