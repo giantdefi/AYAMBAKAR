@@ -105,12 +105,12 @@ export default function MainHeader() {
 <div className="bg-white py-4 sm:py-12 ">
 <div className="mx-auto max-w-7xl px-6 lg:px-8">
 <div className="mx-auto max-w-2xl sm:text-center">
-<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
-<p className="mt-6 text-lg leading-8 text-gray-600">Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
+<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Check Out</h2>
+<p>Selesaikan pesanan anda</p>
 </div>
 <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
   <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-    <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
+    <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Keranjang Belanja</h2>
 
     <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
       <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-3xl">
