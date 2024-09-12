@@ -91,7 +91,7 @@ export default function TopNavigation() {
 
    <a  className="flex-initial  w-[62px] h-[62px] p-2  cursor-pointer ">
  
-   <button onClick={handleOpenDrawer} className={` outline-none hover:outline-hidden transition duration-150 mt-2 animated backInLeft`}>
+   {/* <button onClick={handleOpenDrawer} className={` outline-none hover:outline-hidden transition duration-150 mt-2 animated backInLeft`}>
 
        
         {modalMenuDrawer ?
@@ -103,7 +103,8 @@ export default function TopNavigation() {
           </svg>
 
                }
-          </button>
+          </button> */}
+            <img src="/assets/img/flame.webp" className="h-12" alt="logo" /> 
     
     </a>
 
