@@ -104,11 +104,14 @@ export default function TopNavigation() {
 
                }
           </button> */}
-            <img src="/assets/img/flame.webp" className="h-12" alt="logo" /> 
+          <div className="border-4 rounded-full h-14 w-14  border-gray-500 _gradient_slate">
+             <img src="/assets/img/flame.webp" className="h-12" alt="logo" /> 
+          </div>
+           
     
     </a>
 
-    <a onClick={()=>router.push('/')} className="cursor-pointer  flex centered  w-[250px] mt-2  mr-6">
+    <a onClick={()=>router.push('/')} className="cursor-pointer ml-4 flex centered  w-[250px] mt-2  mr-6">
     <img src="/assets/ayambakarpatriot.png" className=" animated fadeInDown w-3/2" alt="logo" /> 
     </a>
 
