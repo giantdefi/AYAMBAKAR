@@ -80,16 +80,16 @@
       {
          "pid": 12,
          "title": "Tahu Goreng",
-         "price1" : 3000,
-         "price2" : 2000,
+         "price1" : 5000,
+         "price2" : 3000,
             "img" : "/assets/img/products/tahu.webp"
            
          },
          {
             "pid": 13,
             "title": "Tempe Goreng",
-            "price1" : 3000,
-            "price2" : 2000,
+            "price1" : 5000,
+            "price2" : 3000,
                "img" : "/assets/img/products/tempe.webp"
               
             },
