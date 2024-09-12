@@ -55,7 +55,7 @@ export default function HeaderBoard() {
                             Rp. {(item.price1).toLocaleString('id-ID')+',-'}</span> <span className="text-gray-700 font-semibold text-sm">di goofood</span></p>
                         <p className="text-lg font-bold text-red-700">Rp. {(item.price2).toLocaleString('id-ID')+',-'}</p>
                     </div>
-                    <button onClick={()=>handleToCart(ProductJSON[index])} className="w-2/3 absolute bottom-2 left-10  text-gray-800 border bg-sky-300  hover:bg-sky-600 hover:text-white 
+                    <button onClick={()=>handleToCart(ProductJSON[index])} className="w-full lg:w-2/3 absolute bottom-2 lg:left-10  text-gray-800 border bg-sky-300  hover:bg-sky-600 hover:text-white 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
   text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i className="icofont-cart-alt text-2xl"></i>Masuk Keranjang</button>
                 </div>
