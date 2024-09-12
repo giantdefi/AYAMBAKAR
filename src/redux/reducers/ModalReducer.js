@@ -40,7 +40,7 @@ const initialState = {
    modalAdminPaymentWD: false,
    modalBinarySearch: false,
 
-   modalCartButton: true,
+   modalCartButton: false,
 
    modalMyEpinsReactivate: false,
    modalConfirmationProcess : false,
