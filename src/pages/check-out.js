@@ -119,8 +119,9 @@ export default function MainHeader() {
         <div className="space-y-6">
         {!shoppingCart.length &&
         <>
-        <p>Keranjang belanja Kosong!</p>
-         <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
+        <p>Ops...Keranjang belanja Kosong!</p>
+        <img className="w-1/3 mx-auto" src='/assets/img/empty-cart1.png' alt="cart" />
+         {/* <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
              
                 <div className=" flex space-x-4">
                   <div className="rounded-full bg-slate-200 h-10 w-10"></div>
@@ -135,7 +136,7 @@ export default function MainHeader() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
         </>
                
         }
@@ -165,14 +166,14 @@ export default function MainHeader() {
                   </button>
                 </div>
                 <div className="text-end md:order-4 md:w-32">
-                  <p className="text-base font-bold text-orange-900 dark:text-white">Rp. {(item.quantity*item.price).toLocaleString('id-ID')+',-'}</p>
+                  <p className="text-base font-bold text-orange-900 dark:text-white">Rp. {(item.quantity*item.price2).toLocaleString('id-ID')+',-'}</p>
                 </div>
               </div>
 
               <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                <div className="text-base font-medium text-gray-900  dark:text-white"><span className="bold">{item.title}</span> <br/> <span className="text-[12px] text-yellow-800">Rp. {(item.price).toLocaleString('id-ID')+',-'}</span> </div>
+                <div className="text-base font-medium text-gray-900  dark:text-white"><span className="bold">{item.title}</span> <br/> <span className="text-[12px] text-yellow-800">Rp. {(item.price2).toLocaleString('id-ID')+',-'}</span> </div>
                 
-                <p>Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi</p>
+                {/* <p className="">{item.desc}</p> */}
                 <div className="flex items-center gap-4">
                  
 

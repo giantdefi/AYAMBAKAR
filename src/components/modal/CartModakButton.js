@@ -14,9 +14,34 @@ export default function PopupNewUser() { // from NewUserJoinWithPopup.js in fold
     // redux store
     const dispatch = useDispatch()
     const { modalCartButton } = useSelector((state) => state.ModalReducer)
-    const { selectedItem } = useSelector((state) => state.CartReducer)
- 
+    const { shoppingCart, selectedItem } = useSelector((state) => state.CartReducer)
+   
     const [clicked, setClicked] = useState(false)
+    const[totalItem, setTotalItem] = useState(false)
+
+    useEffect(() => {
+  
+    //    const totalItem = shoppingCart[selectedItem.pid].quantity
+    //    console.log(totalItem)
+    console.log('================shoppingCart')
+    console.log(shoppingCart)
+
+    for(let i=0; i < shoppingCart.length; i++) {
+        console.log('================shoppingCart.pid')
+        console.log(shoppingCart[i].pid)
+        console.log(selectedItem.pid)
+       
+        if(shoppingCart[i].pid === selectedItem.pid){
+            console.log('ok same')
+            console.log(shoppingCart[i].quantity)
+            setTotalItem(shoppingCart[i].quantity)
+        }
+    }
+
+   
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [shoppingCart])
 
     const handleModalClose = () => {
         document.body.classList.remove('overflow-hidden') // prevent body scroll on modal open
@@ -37,8 +62,11 @@ export default function PopupNewUser() { // from NewUserJoinWithPopup.js in fold
 
                 const checkIfClickedOutside = e => {
                     if (outsideRef.current && !outsideRef.current.contains(e.target)) {
-                        handleModalClose()
+                        setTimeout(() => {
+                            handleModalClose()
                         document.body.classList.remove('overflow-hidden')
+                        }, 20000) 
+                        
                     }
                 }
                 document.addEventListener("click", checkIfClickedOutside)
@@ -50,25 +78,14 @@ export default function PopupNewUser() { // from NewUserJoinWithPopup.js in fold
 
         setTimeout(() => {
             handleModalClose()
-          }, 10000) 
+          }, 20000) 
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [modalCartButton])
 
 
-    const handelJumpToBinary = (user) => {
-        setClicked(true)
+    console.log(totalItem)
 
-        setTimeout(() => {
-            handleModalClose()
-            dispatch(setModalJoinBinary(false)) // if this modal open
-            dispatch(setModalConvertPairing(false)) // if this modal open
-            dispatch(setLoadUsername(user))
-            setTimeout(() => {
-                router.push('/users/m-tree') // prevent flashing
-            })
-        })
-    }
 
     return (
         <>
@@ -94,7 +111,7 @@ export default function PopupNewUser() { // from NewUserJoinWithPopup.js in fold
                                
                                   
                                 <p className="ml-2  text-white ">{selectedItem.title}</p>
-                                <p className="ml-2  text-white ">Rp. {(selectedItem.price).toLocaleString('id-ID')+',-'} </p>
+                                <p className="ml-2  text-white ">Rp. {(selectedItem.price2).toLocaleString('id-ID')+',-'} X {totalItem} item</p>
                                 <div className="flex justify-between items-center w-full">
                                     <p className="ml-2 text-[10px] text-yellow-200"><i></i></p>
                                     {/* <p className="-mr-2 text-[12px] border bg-pink-700 px-2 rounded-lg mb-1 bold"><i className="icofont-arrow-right"></i> M-tree</p> */}

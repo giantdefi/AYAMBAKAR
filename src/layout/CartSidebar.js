@@ -24,7 +24,7 @@ export default function Home() {
     
       let total = 0
       for (let i = 0; i < shoppingCart.length; i++) {
-         total = total + (shoppingCart[i].price * shoppingCart[i].quantity)
+         total = total + (shoppingCart[i].price2 * shoppingCart[i].quantity)
          
       } 
       console.log(total)
@@ -61,6 +61,7 @@ const handleContunueShopping = ()=> {
 
 const handleClearCart = ()=> {
   dispatch(resetCart())
+  router.push('/')
 }
 const handleRemoveItem = (item) =>{
   dispatch(removeCartItem(item))
@@ -116,7 +117,7 @@ return (
                                     <p>
                                       <a href="#">{item.title}</a>
                                     </p>
-                                    <p className="ml-4">Rp. {(item.price).toLocaleString('id-ID')+',-'}</p>
+                                    <p className="ml-4">Rp. {(item.price2).toLocaleString('id-ID')+',-'}</p>
                                   </div>
                                   <p className="mt-1 text-sm text-gray-500">Sate kulit ayam yang lezat, bergizi dan berprotein tinggi.</p>
                                 </div>
@@ -124,7 +125,9 @@ return (
                                   <p className="text-gray-500 bold text-orange-700">Qty : {item.quantity} items</p>
 
                                   <div className="flex">
-                                    <button onClick={()=>handleRemoveItem(item)} className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                    <button onClick={()=>handleRemoveItem(item)} className="font-medium text-red-600 hover:text-indigo-500">
+                                    <i className="icofont-ui-delete"></i>
+                                      Hapus</button>
                                   </div>
                                 </div>
                               </div>

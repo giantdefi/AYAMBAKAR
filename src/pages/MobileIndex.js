@@ -79,10 +79,14 @@ return (
             <h1 className="text-2xl md:text-5xl font-bold font-rocksalt">SATE & AYAM BAKAR </h1>
             <h1 className="text-6xl md:text-7xl font-bold mt-4 font-DayOne">PATRIOT</h1>
             <h1 className="text-2xl md:text-7xl font-bold mt-4 ">Stadion Patriot Bekasi Selatan</h1>
-            <p className="mt-4 text-xl md:text-2xl ">Join thousands of satisfied investors who trust us for safe, transparent, and profitable gold trading.</p>
-           {/*  <a href="#start" className="mt-8 inline-block bg-yellow-500 text-white py-3 px-8 rounded-full text-lg font-semibold ">Start Join Now</a> */}
+           
+          
         </div>
     </section>
+
+    {/* <section className="bg-cover bg-center text-white py-4  bg-[url('/assets/img/bg/burner.webp')]" >
+            <img src="/assets/img/kedai.jpg" alt="kedai" className="bg-white"/>
+    </section> */}
 
     <p className="text-gray-800 bold mt-10 ml-20">Tersedia di :</p>
   
@@ -98,12 +102,12 @@ return (
     </div>
     <div className="bg-sky-800  flex flex-row w-full mt-6">
     <h2 className="text-3xl font-bold text-center text-white mb-4 p-10">
-      Dapatkan super diskon hingga 50% dari harga di GoFood jika makan ditempat atau belanja melalui aplikasi ini.</h2>
+      Dapatkan potongan harga hingga 50% dari harga di GoFood jika makan ditempat atau belanja melalui aplikasi ini.</h2>
     </div>
    
     <ProductSlider/>
 
-    <section className="py-20 bg-white px-2">
+    <section className="py-2 bg-white px-2">
         <div className="container mx-auto">
            
           <ProductPricing/>     

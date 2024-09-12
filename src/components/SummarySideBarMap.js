@@ -87,10 +87,14 @@ export default function MainHeader() {
     
 const handleResetLocation = () => { 
   dispatch(setShowMap(false)) 
-  dispatch(setShowMap(false)) 
+  
 //dispatch(resetMap())
   //dispatch(setShowGooglePopup(true))
   dispatch(setModalMapPicker(true))
+}
+
+const handleContinueshopping = () => {
+  router.push('/')
 }
 
       return (
@@ -154,7 +158,7 @@ const handleResetLocation = () => {
 
             <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
               <dt className="text-base font-bold text-gray-900 dark:text-white">Total</dt>
-              <p className="text-base font-bold text-gray-900 dark:text-white">Rp. 
+              <p className="text-base font-bold text-gray-900 dark:text-white">Rp. {' '}
               {!totalDistance? 
               <svg style={{ maxWidth: 40 }} role="status" className="mx-4 inline w-4 h-4 text-gray-200 dark:text-gray-300 animate-spin  fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
@@ -171,12 +175,16 @@ const handleResetLocation = () => {
             
             <button  className="w-full my-6 text-white bg-blue-700 hover:bg-blue-800 border-4
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
-  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  LANJUT KE PEMBAYARAN</button>
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 bold">  LANJUT KE PEMBAYARAN</button>
+
+    <button onClick={handleContinueshopping}  className="w-full my-6 text-white bg-green-700 hover:bg-blue-800 border-4
+  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 bold">  <i className="icofont-cart-alt text-2xl"></i> LANJUTKAN BELANJA</button>
           </div>
 
           <button onClick={handleResetLocation} className="w-full my-6 text-white bg-red-700 hover:bg-red-800 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
-  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  LOKASI TIDAK AKURAT? PERBAHARUI</button>
+  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 bold">  LOKASI TIDAK AKURAT? PERBAHARUI</button>
 
           <GeoMapMarkersCheckOut/>  
        

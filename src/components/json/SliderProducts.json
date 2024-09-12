@@ -1,0 +1,73 @@
+[
+    {
+    "pid": 1,
+    "title": "Sate Ayam",
+    "desc" : "Dari daging ayam paha atas yang berkualitas dan penuh rasa",
+    "price1" : 35000,
+    "price2" : 20000,
+    "img" : "/assets/img/products/p-1.webp"
+   
+    },
+    {
+    "pid": 2,
+    "title": "Sate Kulit Ayam",
+    "desc" : "Sate dari kulit ayam yang sedang viral, gurih, berlemak dan penuh protein",
+    "price1" : 32000,
+    "price2" : 18000,
+       "img" : "/assets/img/products/p-4.webp"
+      
+    },
+    {
+    "pid": 3,
+    "title": "Sate Kambing",
+    "desc" : "Sate Kambing Muda yang enak, lembut dan gurih",
+    "price1" : 45000,
+    "price2" : 25000,
+       "img" : "/assets/img/products/p-2.webp"
+      
+    },
+    {
+    "pid": 4,
+    "title": "Ayam Bakar Paha",
+    "desc" : "Ayam bakar paha yang lembut dengan sambal yang super Joss",
+    "price1" : 27300,
+    "price2" : 16000,
+       "img" : "/assets/img/products/AB-1.webp"
+      
+
+    },
+    {
+        "pid": 5,
+        "title": "Ayam Bakar Dada",
+        "price1" : 27300,
+        "price2" : 16000,
+           "img" : "/assets/img/products/AB-2.webp"
+          
+        },
+    {
+    "pid": 6,
+    "title": "Ayam Goreng Paha",
+    "price1" : 27300,
+    "price2" : 16000,
+       "img" : "/assets/img/products/AB3.webp"
+      
+    },
+    {
+        "pid": 7,
+        "title": "Ayam Goreng Dada",
+        "price1" : 27300,
+        "price2" : 16000,
+           "img" : "/assets/img/products/AGD.webp"
+          
+        },
+  
+    {
+    "pid": 10,
+    "title": "Pecel Lele",
+    "price1" : 19200,
+    "price2" : 16000,
+       "img" : "/assets/img/products/PCL.webp"
+      
+    }
+   
+]

@@ -87,7 +87,7 @@ export default function MainHeader() {
                      
                         <a onClick={() => onMenuClick('/')} className="flex cursor-pointer w-full">
                        
-                            <img src="/assets/img/logo.webp" className="ml-4 h-8 mt-2 animated fadeInDown" alt="logo" />
+                            <img src="/assets/ayambakarpatriot.png" className="ml-4 h-8 mt-2 animated fadeInDown" alt="logo" />
                         
                         </a>
 
@@ -101,28 +101,28 @@ export default function MainHeader() {
 
                     <div className="flex w-full pt-2 content-center justify-between lg:w-1/2 md:justify-end">
                         <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
-                        <li className=" uppercase font-semibold">
+                        {/* <li className=" uppercase font-semibold">
                                 <Link href="/"><a className="inline-block py-2 px-4 text-white no-underline"
                                 
                                 >Home</a></Link>
-                            </li>
+                            </li> */}
 
-                            <li className="mr-3 uppercase font-semibold">
+                            {/* <li className="mr-3 uppercase font-semibold">
                                 <button onClick={()=>router.push('/shopping')}><p className="inline-block py-2 px-4 text-white no-underline"
                                     // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
                                 >BELANJA</p></button>
-                            </li>
+                            </li> */}
 
-                            <li className="mr-3 uppercase font-semibold">
+                            {/* <li className="mr-3 uppercase font-semibold">
                                 <button onClick={()=>router.push('/about-us')}><p className="inline-block py-2 px-4 text-white no-underline"
                                     // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
                                 >TENTANG</p></button>
-                            </li>
-                            <li className="mr-3 uppercase font-semibold">
+                            </li> */}
+                            {/* <li className="mr-3 uppercase font-semibold">
                                 <button onClick={()=>router.push('/about-us')}><p className="inline-block py-2 px-4 text-white no-underline"
                                     // style={{ color: mainMenuItem === 3 ? 'orange' : 'white' }}
                                 >KONTAK</p></button>
-                            </li>
+                            </li> */}
                             {/* <li className="mr-3 flex centered hidden md:block">
 
 <button type="button" class="relative inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

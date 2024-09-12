@@ -16,18 +16,21 @@ const App = () => {
   const { showMap } = useSelector((state) => state.MapReducer)
   const [location, setLocation] = useState(defaultLocation);
   const [zoom, setZoom] = useState(DefaultZoom); 
-  const {  userCoords, totalDistance } = useSelector((state) => state.MapReducer)
+  const {  userCoords, totalDistance, userLocation } = useSelector((state) => state.MapReducer)
  const [defaultLocation, setDefaultLocation] = useState(userCoords);
+ const [tempUserLocation, setTempUserLocation] = useState(false)
 
   
 const handleChangeLocationBtn = () => {
    dispatch(setShowMap(true)) 
    dispatch(setModalMapPicker(false))
+  // dispatch(setUserCoords(tempUserLocation)) 
 }
 
   function handleChangeLocation (lat, lng){ 
   
     setLocation({lat:lat, lng:lng});
+    setTempUserLocation({ lat: lat, lng: lng })
     dispatch(setUserCoords({ lat: lat, lng: lng })) 
    }
   
@@ -35,10 +38,6 @@ const handleChangeLocationBtn = () => {
     setZoom(newZoom);
   }
 
-  function handleResetLocation(){
-    setDefaultLocation({ ... DefaultLocation});
-    setZoom(DefaultZoom);
-  }
 
   const options = {
     // streetViewControl: false,
@@ -77,6 +76,7 @@ const handleChangeLocationBtn = () => {
     apiKey='AIzaSyAkEmMjAYfctkEl7IdR-gofDFryxENzd8U'/>
 
    </section>
+   <p className="text-white mt-4 text-sm">{userLocation}</p>
 
    <button onClick={handleChangeLocationBtn} className="w-full mt-4  text-white bg-orange-700 hover:bg-orange-800 
   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 
