@@ -79,6 +79,7 @@ return (
             <h1 className="text-2xl md:text-5xl font-bold font-rocksalt mt-4">SATE & AYAM BAKAR </h1>
             <h1 className="text-6xl md:text-7xl font-bold mt-4 font-DayOne">PATRIOT</h1>
             <h1 className="text-2xl md:text-7xl font-bold mt-4 ">Stadion Patriot Bekasi Selatan</h1>
+            <p className="mt-4 text-xl md:text-2xl bold ">Sate Ayam, Sate Kambing, Ayam Bakar, Ayam Goreng, pecel Lele.</p>
            
           
         </div>
