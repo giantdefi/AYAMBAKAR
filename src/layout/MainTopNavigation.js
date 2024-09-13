@@ -84,7 +84,9 @@ export default function MainHeader() {
                 <div className="flex h-14 centered sm:justify-center md:justify-start  mx-auto sm:mx-0
                   w-full md:w-80 ">
 
-                     
+<div className="border-4 rounded-full h-14 w-16  border-gray-500 _gradient_slate">
+             <img src="/assets/img/flame.webp" className="h-12" alt="logo" /> 
+          </div>
                         <a onClick={() => onMenuClick('/')} className="flex cursor-pointer w-full">
                        
                             <img src="/assets/ayambakarpatriot.png" className="ml-4 h-8 mt-2 animated fadeInDown" alt="logo" />
